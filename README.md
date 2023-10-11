@@ -1,1 +1,1 @@
-https://anzhelika99.github.io/home/
+https://anzhelika99.github.io/stylish-home/
