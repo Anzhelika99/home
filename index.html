@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Стильный Дом</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="./js/menu.js"></script>
+    <script defer src="./js/servicesSliderMobile.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <nav class="navbar">
+          <div class="navbar__logo">
+            <a href="#">Стильный Дом</a>
+          </div>
+          <div class="navbar__wrap">
+            <div class="social-links">
+              <a href=""
+                ><img src="./img/telegram-mobile.svg" alt="telegram"
+              /></a>
+              <a
+                href="https://instagram.com/stylish_home39?igshid=MWZjMTM2ODFkZg=="
+                ><img src="./img/instagram-mobile.svg" alt="instagram"
+              /></a>
+            </div>
+            <div class="hamb">
+              <div class="hamb__field" id="hamb">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+          <ul class="menu">
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Услуги</a></li>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Отзывы</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="popap" id="popap">
+          <ul class="menu">
+            <li class="active"><a href="#">Главная</a></li>
+            <li><a href="#">Услуги</a></li>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Отзывы</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </div>
+        <section class="header-screen">
+          <nav class="navbar__pc">
+            <div class="social">
+              <div class="social__phone-link">
+                <a href="tel:+79210290122">8 921 029 01 22</a>
+              </div>
+              <div class="social__links">
+                <a href="https://wa.me/79814788881"
+                  ><img src="./img/whatsApp.svg" alt="WhatsApp"
+                /></a>
+                <a href=""><img src="./img/telegram.svg" alt="telegram" /></a>
+                <a
+                  href="https://instagram.com/stylish_home39?igshid=MWZjMTM2ODFkZg=="
+                  ><img src="./img/instagram.svg" alt="instagram"
+                /></a>
+              </div>
+            </div>
+            <div class="menu__wrap">
+              <ul class="menu">
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Услуги</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Отзывы</a></li>
+                <li><a href="#">Контакты</a></li>
+              </ul>
+            </div>
+          </nav>
+
+          <div class="header-screen__title">
+            <h1>
+              Строительство <br />изготовление мебели <br />Отделка <br />монтаж
+            </h1>
+            <div class="header-screen__title-line"></div>
+          </div>
+          <div class="header-screen__line line"></div>
+          <div class="header-screen__btn">
+            <a href="#form">Связаться с нами</a>
+          </div>
+          <div class="header-screen__dark"></div>
+        </section>
+      </header>
+
+      <main>
+        <div class="promo">
+          <div class="promo__wrap">
+            <a href="#form" class="promo__link button">
+              <p class="promo__link-title">
+                сВЯЖИТЕСЬ С НАМИ И ПОЛУЧИТЕ СКИДКУ
+              </p>
+              <img
+                src="/img/promo-tablet.svg"
+                alt="promo-tablet"
+                class="promo__svg-tablet"
+              />
+              <img
+                src="/img/promo-pc.svg"
+                alt="promo-pc"
+                class="promo__svg-pc"
+              />
+            </a>
+          </div>
+          <div class="promo__line promo__line1 line"></div>
+          <div class="promo__line promo__line2 line"></div>
+          <div class="promo__line promo__line3 line"></div>
+          <div class="promo__line promo__line4 line"></div>
+        </div>
+        <section class="services">
+
+          <h2 class="services__title">наши услуги</h2>
+
+          <div class="services__slider-mobile">
+            <div class="swiper__img">
+                <div class="swiper__nav">
+                  <div class="swiper-pagination">
+                  </div>     
+
+                  <div class="swiper-button-next buttons-slide">
+                    <img src="./img/button-next.svg" alt="button-prev" />
+                  </div>
+
+                  <div class="swiper-button-prev buttons-slide">
+                    <img src="./img/button-prev.svg" alt="button-next" />
+                  </div>
+                </div>
+
+                <div class="swiper-wrapper">
+                <div class="swiper-slide swiper-slide-image">
+                  <img src="./img/slide1.png" alt="Строительство домов,  коттеджей, бань" />
+                </div>
+                <div class="swiper-slide swiper-slide-image">
+                  <img src="./img/slide2.png" alt="Сварочные работы" />
+                </div>
+                <div class="swiper-slide swiper-slide-image">
+                  <img src="./img/slide3.png" alt="Электромонтажные работы" />
+                </div>
+                <div class="swiper-slide swiper-slide-image">
+                  <img src="./img/slide4.png" alt="Отделочные работы" />
+                </div>
+                </div>
+            
+            </div>
+
+            <div class="swiper__links">    
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="swiper-slide__btns">
+                  <a href="#"><p>Мы занимаемся строительством домов и бань из различных материалов</p></a>
+                  <a href="#"><p>коттеджи и дома</p></a>
+                  <a href="#"><p>Бани</p></a>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="swiper-slide__btns">
+                  <a href="#"><p>Изготовление Кованых изделий</p></a>
+                  <a href="#"><p>Изготовление мебели в стиле Лофт</p></a>
+                  <a href="#"><p>Изготовление различных металлоконструкций</p></a>
+                  <a href="#"><p>Изготовление гаражных каркасов</p></a>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="swiper-slide__btns">
+                  <a href="#"><p>Электромонтажные работы</p></a>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="swiper-slide__btns">
+                  <a href="#"><p>отделочные работы</p></a>
+                </div>
+              </div>
+
+              
+            </div>
+            </div>
+          </div>
+
+          <div class="services__slider-pc">
+            <!--<div class="swiper__nav">
+              <div class="swiper-pagination">
+              </div>     
+              <div class="swiper-button-next buttons-slide">
+                <img src="./img/button-next.svg" alt="button-prev" />
+              </div>
+              <div class="swiper-button-prev buttons-slide">
+                <img src="./img/button-prev.svg" alt="button-next" />
+              </div>
+            </div>-->
+            <div class="swiper__img-pc">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide swiper-slide-image">
+                  <img src="./img/slide1.png" alt="Строительство домов,  коттеджей, бань" />
+                </div>
+                <div class="swiper-slide swiper-slide-image">
+                  <img src="./img/slide2.png" alt="Сварочные работы" />
+                </div>
+                <div class="swiper-slide swiper-slide-image">
+                  <img src="./img/slide3.png" alt="Электромонтажные работы" />
+                </div>
+                <div class="swiper-slide swiper-slide-image">
+                  <img src="./img/slide4.png" alt="Отделочные работы" />
+                </div>
+                </div>
+            </div>
+            <div class="swiper__links-pc"></div>
+          </div>
+
+          <a class="services__btn">Задать вопрос</a>
+
+          <div class="services__line line"></div>
+        </section>
+        <div class="marg"></div>
+      </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  </body>
+</html>
