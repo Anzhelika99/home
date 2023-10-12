@@ -1,5 +1,5 @@
 const servicesSlider = () => {
-  const swiper = new Swiper(".services__slider-img", {
+  const swiperImg = new Swiper(".services__slider-img", {
     slidesPerView: 1, // Определите, сколько слайдов будет видно одновременно
     spaceBetween: 0, // Расстояние между слайдами
     loop: true,
@@ -20,7 +20,7 @@ const servicesSlider = () => {
     },
   });
 
-  const swiperMobile = new Swiper(".services__slider-text", {
+  const swiperText = new Swiper(".services__slider-text", {
     slidesPerView: 1, // Определите, сколько слайдов будет видно одновременно
     spaceBetween: 0, // Расстояние между слайдами
     loop: true,
@@ -42,7 +42,6 @@ const servicesSlider = () => {
         ); // Отображать цифры
       },
     },
-    autoHeight: true,
     allowTouchMove: false,
   });
 };
