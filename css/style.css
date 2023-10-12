@@ -672,6 +672,22 @@ main .services__title {
     letter-spacing: 0.145rem;
   }
 }
+@media (min-width: 80em) {
+  main .services__title {
+    top: 13rem;
+    left: 7rem;
+    font-size: 2rem;
+    letter-spacing: 0.29rem;
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+}
+@media (min-width: 87em) {
+  main .services__title {
+    top: 13rem;
+    left: 9vw;
+  }
+}
 main .services__line {
   position: absolute;
   height: 100%;
@@ -723,21 +739,18 @@ main .services__btn {
   line-height: normal;
   font-variant: small-caps;
   letter-spacing: 0.07rem;
-  background: none;
   border-bottom: 1px solid #e5a990;
 }
 @media (min-width: 58.75em) {
   main .services__btn {
-    position: absolute;
-    bottom: 1.12rem;
-    right: 18.4%;
-    z-index: 12;
+    display: none;
   }
 }
 main .services__slider-mobile .swiper__image {
   width: 100%;
   height: 100%;
   padding: 4.25rem 0 1.81rem 0;
+  overflow: hidden;
 }
 main .services__slider-mobile .swiper-slide {
   display: -webkit-box;
@@ -773,7 +786,7 @@ main .services__slider-mobile .swiper-slide__btns a {
   min-height: 2.3125rem;
   padding: 0.5rem;
   margin-bottom: 1rem;
-  color: #D9D9D9;
+  color: #d9d9d9;
   border: 1px solid #e5a990;
   text-align: center;
   vertical-align: middle;
@@ -797,7 +810,6 @@ main .services__slider-pc {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    min-height: 40rem;
     overflow: hidden;
   }
   main .services__slider-pc .services__slider-nav {
@@ -821,6 +833,41 @@ main .services__slider-pc {
     background-color: #272727;
     z-index: 10;
   }
+}
+@media (min-width: 58.75em) and (min-width: 80em) {
+  main .services__slider-pc .services__slider-nav {
+    padding: 0 2rem;
+  }
+}
+@media (min-width: 58.75em) {
+  main .services__slider-pc .services__slider-nav-links {
+    display: none;
+  }
+}
+@media (min-width: 58.75em) and (min-width: 80em) {
+  main .services__slider-pc .services__slider-nav-links {
+    padding-bottom: 1.8rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 3rem 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.9rem 3rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main .services__slider-pc .services__slider-nav-links .swiper-link {
+    color: #fff;
+    display: inline-block;
+    max-width: 100%;
+    font-size: 0.625rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+}
+@media (min-width: 58.75em) {
   main .services__slider-pc .services__slider-nav .swiper-button-next,
   main .services__slider-pc .services__slider-nav .swiper-button-prev {
     position: static;
@@ -833,8 +880,23 @@ main .services__slider-pc {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 100%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
+}
+@media (min-width: 58.75em) and (min-width: 80em) {
+  main .services__slider-pc .services__slider-nav .buttons-slide {
+    margin-top: 50%;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+@media (min-width: 58.75em) {
   main .services__slider-pc .services__slider-nav .swiper-pagination-pc {
     padding-top: 6rem;
     display: -webkit-box;
@@ -853,10 +915,20 @@ main .services__slider-pc {
     -ms-flex-preferred-size: 80%;
         flex-basis: 80%;
   }
+}
+@media (min-width: 58.75em) and (min-width: 80em) {
+  main .services__slider-pc .services__slider-nav .swiper-pagination-pc {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    padding-top: 5rem;
+  }
+}
+@media (min-width: 58.75em) {
   main .services__slider-pc .services__slider-img {
     min-width: 0;
     -ms-flex-preferred-size: 39%;
         flex-basis: 39%;
+    overflow: hidden;
   }
   main .services__slider-pc .services__slider-img img {
     width: 100%;
@@ -864,14 +936,22 @@ main .services__slider-pc {
     -o-object-fit: cover;
        object-fit: cover;
   }
+}
+@media (min-width: 58.75em) and (min-width: 80em) {
+  main .services__slider-pc .services__slider-img {
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
+  }
+}
+@media (min-width: 58.75em) {
   main .services__slider-pc .services__slider-text {
     position: relative;
-    padding: 2.3rem 1.5rem 3.31rem 1.31rem;
+    padding: 2.3rem 1.5rem 0.94rem 1.5rem;
     background-color: #272727;
     z-index: 10;
     min-width: 0;
-    -ms-flex-preferred-size: 28.44rem;
-        flex-basis: 28.44rem;
+    -ms-flex-preferred-size: 47%;
+        flex-basis: 47%;
   }
   main .services__slider-pc .services__slider-text .swiper-slide__title {
     font-size: 1.25rem;
@@ -904,6 +984,48 @@ main .services__slider-pc {
     line-height: normal;
     letter-spacing: -0.00438rem;
     text-transform: uppercase;
+  }
+  main .services__slider-pc .services__slider-text .swiper-slide__btn-form {
+    display: block;
+    width: 12.4375rem;
+    padding: 0 0 0.44rem 0;
+    color: #e5a990;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: normal;
+    font-variant: small-caps;
+    letter-spacing: 0.07rem;
+    border-bottom: 1px solid #e5a990;
+    margin-top: 3rem;
+  }
+}
+@media (min-width: 58.75em) and (min-width: 80em) {
+  main .services__slider-pc .services__slider-text {
+    -ms-flex-preferred-size: 38%;
+        flex-basis: 38%;
+    padding: 2rem 1rem 1rem 2rem;
+  }
+  main .services__slider-pc .services__slider-text .swiper-slide__title {
+    font-size: 1.5rem;
+    letter-spacing: 0.105rem;
+  }
+  main .services__slider-pc .services__slider-text .swiper-slide__subtitle {
+    padding: 1rem 0;
+    font-size: 1.25rem;
+    letter-spacing: -0.0125rem;
+  }
+  main .services__slider-pc .services__slider-text .swiper-slide__text {
+    font-size: 0.9375rem;
+    letter-spacing: -0.00938rem;
+  }
+  main .services__slider-pc .services__slider-text .swiper-slide__popap-link {
+    font-size: 0.9375rem;
+    letter-spacing: -0.00469rem;
+  }
+}
+@media (min-width: 58.75em) and (min-width: 87em) {
+  main .services__slider-pc .services__slider-text {
+    padding: 2rem 3rem 1rem 2rem;
   }
 }
 
