@@ -28,6 +28,10 @@ body {
   background-size: 100%;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 body .wrapper {
   overflow: hidden;
 }
@@ -126,7 +130,7 @@ header {
     }
   }
 
-  .popap {
+  .popup-menu {
     position: fixed;
     height: 100%;
     z-index: 12;
@@ -533,6 +537,10 @@ main {
   .services {
     position: relative;
     background-color: $bg-grey;
+    padding-bottom: 0.75rem;
+    @media (min-width: 58.75em) {
+      padding: 0;
+    }
 
     &__title {
       position: absolute;
@@ -798,6 +806,12 @@ main {
           flex-basis: 47%;
 
           & .swiper-slide {
+            & .text-margin {
+              margin-bottom: 0.83606rem;
+            }
+            & .text-pc {
+              display: none;
+            }
             &__title {
               font-size: 1.25rem;
               font-weight: 600;
@@ -820,7 +834,7 @@ main {
               line-height: 156.9%; /* 1.27481rem */
               letter-spacing: -0.00813rem;
             }
-            &__popap-link {
+            &__popup-link {
               text-align: right;
               display: block;
               color: $text-orange;
@@ -845,7 +859,7 @@ main {
             }
           }
           @media (min-width: 80em) {
-            flex-basis: 38%;
+            flex-basis: 40%;
             padding: 2rem 1rem 1rem 2rem;
             & .swiper-slide {
               &__title {
@@ -861,7 +875,7 @@ main {
                 font-size: 0.9375rem;
                 letter-spacing: -0.00938rem;
               }
-              &__popap-link {
+              &__popup-link {
                 font-size: 0.9375rem;
                 letter-spacing: -0.00469rem;
               }
@@ -869,10 +883,86 @@ main {
           }
           @media (min-width: 87em) {
             padding: 2rem 3rem 1rem 2rem;
+            & .swiper-slide .text-pc {
+              display: block;
+            }
           }
         }
       }
     }
+
+    &__popups {
+      & .popup {
+        padding: 1rem 0;
+        &__content {
+          width: max(80%, 18rem);
+          padding: 4rem 0.62rem 1.5rem 0.62rem;
+          border: 1px solid $text-grey;
+        }
+        &__title {
+          color: $text-orange;
+          font-size: 0.8125rem;
+          font-weight: 600;
+          line-height: normal;
+          margin: 0.62rem 0;
+        }
+        &__subtitle {
+          color: $text-orange;
+          font-size: 0.75rem;
+          font-weight: 300;
+          line-height: normal;
+        }
+        &__text {
+          color: $text-grey;
+          font-size: 0.6875rem;
+          line-height: normal;
+          font-weight: 300;
+          letter-spacing: -0.00688rem;
+        }
+        & .text-margin {
+          margin: 0.5rem 0; 
+        }
+        &__close {
+          right: 0.75rem;
+          top: 0.75rem;
+        }
+      }
+    }
+  }
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(13, 13, 13, 0.8);
+  backdrop-filter: blur(2px);
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 0.5s;
+
+  &__body {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__content {
+    background: #272727;
+    position: relative;
+  }
+  &__close {
+    position: absolute;
+  }
+
+  &.open {
+    opacity: 1;
+    visibility: visible;
   }
 }
 
