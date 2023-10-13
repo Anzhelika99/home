@@ -6,7 +6,7 @@ const popupOpen = () => {
 
   let unlock = true;
 
-  const timeout = 500;
+  const timeout = 400;
 
   popupLinks.forEach((elem) => {
     elem.addEventListener("click", (e) => {
