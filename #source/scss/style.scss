@@ -926,6 +926,57 @@ main {
           right: 0.75rem;
           top: 0.75rem;
         }
+        @media (min-width: 58.75em) {
+          padding: 1rem 0;
+
+          &__content {
+          max-width: 29rem;
+          min-height: 30rem;
+          border: 0;
+          padding: 5.4rem 1rem 1.5rem 1rem;
+          }
+          &__text-center {
+            padding: 5.4rem 3rem 1.5rem 3rem;
+          }
+          &__title {
+            text-align: center;
+            font-size: 0.9375rem;
+            margin: 1.6rem 0;
+            text-transform: uppercase;
+          }
+          &__text {
+            font-size: 0.8125rem;
+            letter-spacing: 0.07rem;
+          }
+          & .text-margin {
+            margin: 0.7rem 0; 
+          }
+        }
+        @media (min-width: 80em) {
+
+          &__content {
+          padding: 4rem 1.5rem 2rem 1.5rem ;
+          }
+          &__text-center {
+            padding: 5.4rem 3rem 1.5rem 3rem;
+          }
+          &__title {
+            text-align: center;
+            font-size: 0.9375rem;
+            margin: 1.6rem 0;
+            text-transform: uppercase;
+          }
+          &__text {
+            font-size: 0.8125rem;
+            letter-spacing: 0.07rem;
+          }
+          & .text-margin {
+            margin: 0.7rem 0; 
+          }
+          & .text-tablet {
+            display: none;
+          }
+        }
       }
     }
   }
@@ -944,7 +995,7 @@ main {
   visibility: hidden;
   overflow-y: auto;
   overflow-x: hidden;
-  transition: all 0.5s;
+  transition: all 0.4s;
 
   &__body {
     min-height: 100%;

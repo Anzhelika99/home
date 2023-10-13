@@ -1082,6 +1082,57 @@ main .services__popups .popup__close {
   right: 0.75rem;
   top: 0.75rem;
 }
+@media (min-width: 58.75em) {
+  main .services__popups .popup {
+    padding: 1rem 0;
+  }
+  main .services__popups .popup__content {
+    max-width: 29rem;
+    min-height: 30rem;
+    border: 0;
+    padding: 5.4rem 1rem 1.5rem 1rem;
+  }
+  main .services__popups .popup__text-center {
+    padding: 5.4rem 3rem 1.5rem 3rem;
+  }
+  main .services__popups .popup__title {
+    text-align: center;
+    font-size: 0.9375rem;
+    margin: 1.6rem 0;
+    text-transform: uppercase;
+  }
+  main .services__popups .popup__text {
+    font-size: 0.8125rem;
+    letter-spacing: 0.07rem;
+  }
+  main .services__popups .popup .text-margin {
+    margin: 0.7rem 0;
+  }
+}
+@media (min-width: 80em) {
+  main .services__popups .popup__content {
+    padding: 4rem 1.5rem 2rem 1.5rem;
+  }
+  main .services__popups .popup__text-center {
+    padding: 5.4rem 3rem 1.5rem 3rem;
+  }
+  main .services__popups .popup__title {
+    text-align: center;
+    font-size: 0.9375rem;
+    margin: 1.6rem 0;
+    text-transform: uppercase;
+  }
+  main .services__popups .popup__text {
+    font-size: 0.8125rem;
+    letter-spacing: 0.07rem;
+  }
+  main .services__popups .popup .text-margin {
+    margin: 0.7rem 0;
+  }
+  main .services__popups .popup .text-tablet {
+    display: none;
+  }
+}
 
 .popup {
   position: fixed;
@@ -1097,8 +1148,8 @@ main .services__popups .popup__close {
   visibility: hidden;
   overflow-y: auto;
   overflow-x: hidden;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 .popup__body {
   min-height: 100%;
