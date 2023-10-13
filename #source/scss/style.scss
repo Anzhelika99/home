@@ -5,7 +5,7 @@ $bg-dark: #0d0d0d;
 $bg-grey: #272727;
 $text-grey: #999393;
 $text-orange: #e5a990;
-$line: rgba(153, 147, 147, 0.5);
+$line: rgba(153, 147, 147, 0.25);
 
 html {
   font-size: max(16px, calc(1vw + 0.753em));
@@ -43,6 +43,7 @@ body .wrapper {
 .line {
   width: 1px;
   background-color: $line;
+
 }
 
 header {
@@ -984,19 +985,133 @@ main {
     position: relative;
     padding-top: 3.25rem;
     padding-bottom: 3.56rem;
+    @media (min-width: 58.75em) {
+      padding: 0.5rem 0 3.62rem 0;
+    }
+
+    @media (min-width: 80em) {
+       padding: 3rem 0 7rem 0;
+    }
+
     &__line {
       position: absolute;
       height: 100%;
       right: 0.95rem;
       top: 0;
-      z-index: 100;
+      z-index: 1;
+      @media (min-width: 58.75em) {
+        left: 6.6875rem;
+
+        &2 {
+          left: 20.31rem;
+        }
+        &3 {
+          right: 19.94rem;
+        }
+        &4 {
+          right: 10.44944rem;
+        }
+      }
+      @media (min-width: 80em) {
+        left: 10.4375rem;
+        &2 {
+          left: min(37.9rem, 29vw);
+        }
+        &3 {
+          right: min(36.56rem, 29vw);
+        }
+        &4 {
+          right: 10.4375rem;
+        }
+      }
+      
+      &2, &3, &4 {
+        display: none;
+
+        @media (min-width: 58.75em) {
+          display: block;
+          position: absolute;
+          top: 0;
+          height: 100%;
+        }
+      } 
+    
     }
     .stage {
+
+      &.line-right:after {
+        display: none;
+        @media (min-width: 58.75em) {
+          content: '';
+          display: block;
+          position: absolute;
+          right: 0;
+          height: 1px;
+          width: 68.1vw;
+          background-color: $line;
+        }
+        @media (min-width: 80em)  {
+          right: 10.4375rem;
+          width: 59vw;
+        }
+
+      }
+      &.line-left:after {
+        display: none;
+        @media (min-width: 58.75em) {
+          content: '';
+          display: block;
+          position: absolute;
+          left: 0;
+          height: 1px;
+          width: 68.7vw;
+          background-color: $line;
+        }
+        @media (min-width: 80em)  {
+          left: 10.4375rem;
+          width: 59vw;
+        }
+
+      }
+      &.line-left:after, &.line-right:after {
+        @media (min-width: 90em)  {
+          width: 60vw;
+        }
+        @media (min-width: 97.5em)  {
+          width: 60.2vw;
+        }
+        @media (min-width: 111em)  {
+          width: 61.5vw;
+        }
+        @media (min-width: 118em)  {
+          width: 62.3vw;
+        }
+      }
+
       &__wrapper {
         border-top: 1px solid $line;
         margin-right: 0.95rem;
         padding-bottom: 1.3rem;
 
+        @media (min-width: 58.75em) {
+          border: 0;
+          margin-left: 7.31rem;
+          display: grid;
+          grid-template-columns: 1fr 19rem;
+        }
+
+        @media (min-width: 80em) {
+          margin: 0 2rem 0 10.5rem; 
+          grid-template-columns: 1fr 21rem;
+        }
+        @media (min-width: 85em) {
+          margin: 0 7vw 0 10.5rem; 
+          grid-template-columns: 1fr 22vw;
+        }
+        @media (min-width: 110em) {
+          margin: 0 10.5rem 0 10.5rem; 
+          grid-template-columns: 1fr 20vw;
+        }
       }
 
       &__top {
@@ -1005,8 +1120,21 @@ main {
         grid-template-columns: 1fr 2fr;
         min-height: max(4.13rem, 11vw);
 
-        & .title-smoll {
-          font-size: 0.875rem;
+        @media (min-width: 58.75em) {
+          display: flex;
+        }
+        @media (min-width: 80em) {
+          min-height: 18rem;
+        }
+
+      }
+      & .title-smoll {
+        font-size: 0.875rem;
+        @media (min-width: 58.75em) {
+          font-size: 2rem;
+        }
+        @media (min-width: 80em) {
+          font-size: 3rem;
         }
       }
       &__nums {
@@ -1014,6 +1142,19 @@ main {
         border-right: 1px solid $line;
         width: 100%;
         position: relative;
+
+        @media (min-width: 58.75em) {
+          border: 0;
+          flex-basis: 13.5rem;
+        }
+
+        @media (min-width: 80em) {
+          flex-basis: 28%;
+        }
+
+        @media (min-width: 85em) {
+          flex-basis: 32%;
+        }
 
 
         & p:first-child {
@@ -1027,6 +1168,18 @@ main {
           -webkit-text-stroke: 1px #999393;
           color: #0d0d0d;
           opacity: 0.8;
+
+          @media (min-width: 58.75em) {
+            font-size: 6rem;
+            top: 0;
+            left: 0;
+            transform: translateX(0);
+          }
+          @media (min-width: 80em) {
+            font-size: 8rem;
+            top: 35%;
+            left: 1rem;
+          }
         }
         & p:last-child {
           position: absolute;
@@ -1038,6 +1191,17 @@ main {
           font-weight: 700;
           line-height: normal;
           text-transform: uppercase;
+          @media (min-width: 58.75em) {
+            font-size: 2rem;
+            top: 4.01rem;
+            left: 80%;
+            transform: translateX(-80%);
+          }
+          @media (min-width: 80em) {
+            top: 70%;
+            left: 55%;
+          transform: translateX(-55%);
+          }
         }
       }
       &__title {
@@ -1053,7 +1217,18 @@ main {
         text-transform: uppercase;
         opacity: 0;
         transform: translateY(40%);
-        transition: all 1s ease;
+        transition: all 0.8s ease-out;
+        text-wrap: balance;
+        @media (min-width: 58.75em) {
+          padding: 0;
+          flex-basis: 55%;
+          justify-content: flex-start;
+          font-size: 2rem;
+        }
+        @media (min-width: 80em) {
+          font-size: 3rem;
+          padding-left: 3rem;
+        }
       }
       &__text {
         padding: 1rem 0.2rem 0 0.5rem;
@@ -1061,8 +1236,20 @@ main {
         line-height: normal;
         letter-spacing: -0.0125rem;
         transform: translateY(40%);
-        transition: all 1s ease;
+        transition: all 0.8s ease-out;
         opacity: 0;
+        display: flex;
+        align-items: center;
+
+        @media (min-width: 58.75em) {
+          padding: 0.5rem 0 0 0.5rem;
+          transition-delay: 0.7s;
+          font-size: 0.6875rem;
+        }
+        @media (min-width: 80em) {
+          font-size: 0.9375rem;
+          padding: 0.5rem;
+        }
       }
       & .active {
         opacity: 1;
