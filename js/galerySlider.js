@@ -1,15 +1,16 @@
 const galerySlider = () => {
-  const swiper = new Swiper(".swiper__galery", {
+  const swiperGalery = new Swiper(".swiper__galery", {
     slidesPerView: 1,
-    spaceBetween: 0,
+    spaceBetween: 20,
+    loop: true,
     navigation: {
-      nextEl: ".next-button",
-      prevEl: ".prev-button",
+      nextEl: ".galery__button-next",
+      prevEl: ".galery__button-prev",
     },
     breakpoints: {
       940: {
         slidesPerView: 2,
-        spaceBetween: 44,
+        spaceBetween: 40,
       },
       1280: {
         slidesPerView: 3,

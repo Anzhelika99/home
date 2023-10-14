@@ -1,7 +1,7 @@
 const servicesSlider = () => {
   const swiperImg = new Swiper(".services__slider-img", {
     slidesPerView: 1, // Определите, сколько слайдов будет видно одновременно
-    spaceBetween: 0, // Расстояние между слайдами
+    spaceBetween: 5, // Расстояние между слайдами
     loop: true,
     navigation: {
       nextEl: ".swiper-button-next",
