@@ -18,6 +18,5 @@ const galerySlider = () => {
     },
   });
 
-  document.getElementById("popup-galery").style.display = "block";
 }
 galerySlider()

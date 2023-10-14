@@ -4,38 +4,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Стильный Дом</title>
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
-    <link rel="stylesheet" href="./css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
-    <script defer src="./js/menu.js"></script>
-    <script defer src="./js/servicesSliderMobile.js"></script>
-    <script defer src="./js/servicesSlider.js"></script>
-    <script defer src="./js/popupOpen.js"></script>
-    <script defer src="./js/animationFadeInUp.js"></script>
-    <script defer src="./js//galerySlider.js"></script>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/menu.js" defer></script>
+    <script src="./js/servicesSliderMobile.js" defer></script>
+    <script src="./js/servicesSlider.js" defer></script>
+    <script src="./js/popupOpen.js" defer></script>
+    <script src="./js/animationFadeInUp.js" defer></script>
+    <script src="./js/galerySlider.js" defer></script>
+    <script src="./js/smoothScroll.js" defer></script>
+    
   </head>
   <body>
     <div class="wrapper">
-      <header>
+      <header class="header">
         <nav class="navbar">
           <div class="navbar__logo">
             <a href="#">Стильный Дом</a>
           </div>
           <div class="navbar__wrap">
             <div class="social-links">
-              <a href=""
+              <a href="https://t.me/Stylish_home39" target="_blank"
                 ><img src="./img/messengers/telegram-mobile.svg" alt="telegram"
               /></a>
               <a
-                href="https://instagram.com/stylish_home39?igshid=MWZjMTM2ODFkZg=="
+                href="https://instagram.com/stylish_home39?igshid=MWZjMTM2ODFkZg==" target="_blank"
                 ><img
                   src="./img/messengers/instagram-mobile.svg"
                   alt="instagram"
@@ -50,20 +53,20 @@
             </div>
           </div>
           <ul class="menu">
-            <li><a href="#">Главная</a></li>
-            <li><a href="#">Услуги</a></li>
-            <li><a href="#">О нас</a></li>
-            <li><a href="#">Отзывы</a></li>
-            <li><a href="#">Контакты</a></li>
+            <li><a href="#top" class="scroll-top">Главная</a></li>
+            <li><a href="#services" class="scroll-services">Услуги</a></li>
+            <li><a href="#about-us">О нас</a></li>
+            <li><a href="#reviews">Отзывы</a></li>
+            <li><a href="#contacts">Контакты</a></li>
           </ul>
         </nav>
         <div class="popup-menu" id="popup-menu">
           <ul class="menu">
-            <li class="active"><a href="#">Главная</a></li>
-            <li><a href="#">Услуги</a></li>
-            <li><a href="#">О нас</a></li>
-            <li><a href="#">Отзывы</a></li>
-            <li><a href="#">Контакты</a></li>
+            <li><a href="#top" class="scroll-top">Главная</a></li>
+            <li><a href="#services" class="scroll-services">Услуги</a></li>
+            <li><a href="#about-us">О нас</a></li>
+            <li><a href="#reviews">Отзывы</a></li>
+            <li><a href="#contacts">Контакты</a></li>
           </ul>
         </div>
         <section class="header-screen">
@@ -73,25 +76,25 @@
                 <a href="tel:+79210290122">8 921 029 01 22</a>
               </div>
               <div class="social__links">
-                <a href="https://wa.me/79814788881"
+                <a href="https://wa.me/79814788881" target="_blank"
                   ><img src="./img/messengers/whatsApp.svg" alt="WhatsApp"
                 /></a>
-                <a href=""
+                <a href="https://t.me/Stylish_home39" target="_blank"
                   ><img src="./img/messengers/telegram.svg" alt="telegram"
                 /></a>
                 <a
-                  href="https://instagram.com/stylish_home39?igshid=MWZjMTM2ODFkZg=="
+                  href="https://instagram.com/stylish_home39?igshid=MWZjMTM2ODFkZg==" target="_blank"
                   ><img src="./img/messengers/instagram.svg" alt="instagram"
                 /></a>
               </div>
             </div>
             <div class="menu__wrap">
               <ul class="menu">
-                <li><a href="#">Главная</a></li>
-                <li><a href="#">Услуги</a></li>
-                <li><a href="#">О нас</a></li>
-                <li><a href="#">Отзывы</a></li>
-                <li><a href="#">Контакты</a></li>
+                <li><a href="#top" class="scroll-top">Главная</a></li>
+                <li><a href="#services" class="scroll-services">Услуги</a></li>
+                <li><a href="#about-us">О нас</a></li>
+                <li><a href="#reviews">Отзывы</a></li>
+                <li><a href="#contacts">Контакты</a></li>
               </ul>
             </div>
           </nav>
@@ -1577,6 +1580,7 @@
         <div class="margin"></div>
       </main>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/seamless-scroll-polyfill@latest"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   </body>
 </html>
