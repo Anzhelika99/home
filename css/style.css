@@ -699,7 +699,7 @@ main .services__line {
   height: 100%;
   right: 0.95rem;
   top: 0;
-  z-index: 100;
+  z-index: 10;
 }
 @media (min-width: 58.75em) {
   main .services__line {
@@ -1500,6 +1500,16 @@ main .galery {
   position: relative;
   padding: 4.81rem 0 5.11rem 0;
 }
+@media (min-width: 58.75em) {
+  main .galery {
+    padding: 5rem 0;
+  }
+}
+@media (min-width: 80em) {
+  main .galery {
+    padding: 8.5rem 0;
+  }
+}
 main .galery__wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1655,6 +1665,401 @@ main .galery .popup__galery .swiper__galery .swiper__nav .galery__button-prev,
 main .galery .popup__galery .swiper__galery .swiper__nav .galery__button-next {
   position: static;
   margin: 0 2rem;
+  cursor: pointer;
+}
+main .about__wrapper {
+  position: relative;
+  padding-bottom: 2.81rem;
+}
+@media (min-width: 58.75em) {
+  main .about__wrapper {
+    padding-bottom: 3.5rem;
+  }
+}
+@media (min-width: 80em) {
+  main .about__wrapper {
+    padding-bottom: 9.25rem;
+  }
+}
+main .about__wrapper .about {
+  padding: 0 max(1.38rem, 8vw) 1.69rem 0.4rem;
+  margin-left: 0.95rem;
+  background: url(../img/about-us/about-us-mobile1.png);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  border-bottom: 1px solid rgba(153, 147, 147, 0.25);
+}
+@media (min-width: 58.75em) {
+  main .about__wrapper .about {
+    background: none;
+    margin: 0;
+    padding: 0 20.3075rem 2.37rem 6.55rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border: none;
+  }
+  main .about__wrapper .about__title {
+    min-width: 14rem;
+  }
+}
+@media (min-width: 64em) {
+  main .about__wrapper .about {
+    padding: 0 20.3075rem 5.5rem 6.55rem;
+  }
+}
+@media (min-width: 80em) {
+  main .about__wrapper .about {
+    display: block;
+    padding: 0 50% 2.81rem 10.44rem;
+  }
+}
+main .about__wrapper .guarantees {
+  padding: 0.94rem 0.95rem 2.75rem 0.4rem;
+  margin-left: 0.95rem;
+}
+main .about__wrapper .guarantees__items {
+  display: -ms-grid;
+  display: grid;
+  row-gap: 1.2rem;
+  padding-left: 0.3rem;
+}
+@media (min-width: 30em) {
+  main .about__wrapper .guarantees__items {
+    -ms-grid-columns: 1fr 1.2rem 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+}
+@media (min-width: 58.75em) {
+  main .about__wrapper .guarantees__items {
+    background: none;
+    -ms-grid-columns: 1fr 2.7rem 1fr 2.7rem 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem 2.7rem;
+  }
+}
+@media (min-width: 80em) {
+  main .about__wrapper .guarantees__items {
+    padding-left: 5.5rem;
+  }
+}
+main .about__wrapper .guarantees__items .guarantees__item {
+  border: 1px solid #999393;
+  padding: 0.5rem;
+  font-size: 0.6875rem;
+  line-height: normal;
+}
+main .about__wrapper .guarantees__items .guarantees__item-title {
+  font-weight: 700;
+  padding-bottom: 0.3rem;
+}
+@media (min-width: 58.75em) {
+  main .about__wrapper .guarantees__items .guarantees__item-title {
+    padding-bottom: 0.5rem;
+  }
+}
+@media (min-width: 58.75em) {
+  main .about__wrapper .guarantees__items .guarantees__item {
+    padding: 0.4rem;
+  }
+}
+main .about__wrapper .guarantees__text-pc {
+  display: none;
+}
+@media (min-width: 58.75em) {
+  main .about__wrapper .guarantees__text-pc {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 2.37rem;
+    padding-left: 0.4rem;
+  }
+}
+@media (min-width: 80em) {
+  main .about__wrapper .guarantees__text-pc {
+    font-size: 1rem;
+    margin-bottom: 2.69rem;
+    padding: 0 0 0 0.7rem;
+  }
+}
+@media (min-width: 58.75em) {
+  main .about__wrapper .guarantees {
+    margin: 0;
+    padding: 0 6.6875rem 6.31rem 6.4rem;
+    border-top: 1px solid rgba(153, 147, 147, 0.25);
+  }
+  main .about__wrapper .guarantees__title {
+    padding-left: 0.15rem;
+  }
+}
+@media (min-width: 80em) {
+  main .about__wrapper .guarantees {
+    padding: 0 36% 2.81rem 10.44rem;
+  }
+}
+@media (min-width: 100em) {
+  main .about__wrapper .guarantees {
+    padding: 0 45% 2.81rem 10.44rem;
+  }
+}
+main .about__wrapper .price {
+  padding: 1.19rem max(1.38rem, 8vw) 2rem 0.4rem;
+  margin-left: 0.95rem;
+  background: url(../img/about-us/about-us-mobile2.png);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: auto 101%;
+  border-top: 1px solid rgba(153, 147, 147, 0.25);
+}
+@media (min-width: 58.75em) {
+  main .about__wrapper .price {
+    background: none;
+    margin: 0;
+    padding: 0 6.6875rem 0 6.55rem;
+  }
+  main .about__wrapper .price__title {
+    margin-bottom: 1.88rem;
+  }
+  main .about__wrapper .price__text {
+    padding-left: 0.4rem;
+  }
+}
+@media (min-width: 80em) {
+  main .about__wrapper .price {
+    padding: 0 15rem 5rem 10.44rem;
+    border-bottom: 1px solid rgba(153, 147, 147, 0.25);
+  }
+}
+@media (min-width: 100em) {
+  main .about__wrapper .price {
+    padding: 0 50% 5rem 10.44rem;
+  }
+}
+main .about__wrapper .about__title,
+main .about__wrapper .guarantees__title,
+main .about__wrapper .price__title {
+  font-family: "RubikOne", sans-serif;
+  -webkit-text-stroke: 1px #999393;
+  color: rgba(0, 0, 0, 0);
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  padding-bottom: 0.8rem;
+}
+@media (min-width: 58.75em) {
+  main .about__wrapper .about__title,
+  main .about__wrapper .guarantees__title,
+  main .about__wrapper .price__title {
+    font-size: 3rem;
+    padding-bottom: 0;
+  }
+}
+@media (min-width: 80em) {
+  main .about__wrapper .about__title,
+  main .about__wrapper .guarantees__title,
+  main .about__wrapper .price__title {
+    font-size: 4rem;
+  }
+}
+main .about__wrapper .about__text,
+main .about__wrapper .price__text {
+  font-size: 0.8125rem;
+  line-height: normal;
+}
+@media (min-width: 80em) {
+  main .about__wrapper .about__text,
+  main .about__wrapper .price__text {
+    font-size: 1rem;
+    padding: 0 0 0 0.7rem;
+  }
+}
+main .about__wrapper .about__text span,
+main .about__wrapper .price__text span {
+  font-weight: 700;
+}
+main .about__wrapper .about__line-vertical {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  z-index: -1;
+}
+main .about__wrapper .about__line-vertical1 {
+  left: 0.95rem;
+}
+main .about__wrapper .about__line-vertical2 {
+  right: 0.95rem;
+}
+main .about__wrapper .about__line-vertical3, main .about__wrapper .about__line-vertical4 {
+  display: none;
+}
+@media (min-width: 58.75em) {
+  main .about__wrapper .about__line-vertical1 {
+    left: 6.6875rem;
+  }
+  main .about__wrapper .about__line-vertical2 {
+    left: 20.31rem;
+  }
+  main .about__wrapper .about__line-vertical3 {
+    display: block;
+    right: 19.94rem;
+  }
+  main .about__wrapper .about__line-vertical4 {
+    display: block;
+    right: 6.55rem;
+  }
+}
+@media (min-width: 80em) {
+  main .about__wrapper .about__line-vertical1 {
+    left: 10.4375rem;
+  }
+  main .about__wrapper .about__line-vertical2 {
+    left: min(37.9rem, 29vw);
+  }
+  main .about__wrapper .about__line-vertical3 {
+    right: min(36.56rem, 29vw);
+  }
+  main .about__wrapper .about__line-vertical4 {
+    right: 10.4375rem;
+  }
+}
+main .about__wrapper .about__line-horizontal {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  left: 0;
+  z-index: -1;
+  display: none;
+}
+@media (min-width: 58.75em) {
+  main .about__wrapper .about__line-horizontal {
+    display: block;
+  }
+  main .about__wrapper .about__line-horizontal1 {
+    top: 0;
+  }
+  main .about__wrapper .about__line-horizontal2 {
+    bottom: 34rem;
+  }
+}
+@media (min-width: 63em) {
+  main .about__wrapper .about__line-horizontal2 {
+    bottom: 34rem;
+  }
+}
+@media (min-width: 70em) {
+  main .about__wrapper .about__line-horizontal2 {
+    bottom: 33.5rem;
+  }
+}
+@media (min-width: 76.875em) {
+  main .about__wrapper .about__line-horizontal2 {
+    bottom: 33rem;
+  }
+}
+@media (min-width: 80em) {
+  main .about__wrapper .about__line-horizontal1 {
+    top: 4.5rem;
+  }
+  main .about__wrapper .about__line-horizontal2 {
+    display: none;
+  }
+}
+main .about__wrapper .about__images img {
+  display: none;
+}
+@media (min-width: 58.75em) {
+  main .about__wrapper .about__images img {
+    display: block;
+    position: absolute;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+  main .about__wrapper .about__images img:nth-child(1) {
+    top: 0;
+    right: 12.44rem;
+    max-height: 30.75rem;
+  }
+  main .about__wrapper .about__images img:nth-child(2) {
+    top: -2.19rem;
+    right: 6.5rem;
+    max-height: 34.125rem;
+  }
+  main .about__wrapper .about__images img:nth-child(3) {
+    top: -1.5rem;
+    right: 0.94rem;
+    max-height: 28.875rem;
+  }
+  main .about__wrapper .about__images img:nth-child(4) {
+    display: none;
+  }
+  main .about__wrapper .about__images img:hover {
+    -webkit-transform: scale(110%);
+            transform: scale(110%);
+  }
+}
+@media (min-width: 80em) {
+  main .about__wrapper .about__images img:nth-child(1) {
+    top: 4.5rem;
+    right: min(39.87rem, 27vw);
+    max-height: 50rem;
+  }
+  main .about__wrapper .about__images img:nth-child(2) {
+    top: 12.12rem;
+    right: min(29rem, 18.5vw);
+    max-height: 48rem;
+  }
+  main .about__wrapper .about__images img:nth-child(3) {
+    top: 5.81rem;
+    right: min(18.3rem, 10vw);
+    max-height: 45rem;
+  }
+  main .about__wrapper .about__images img:nth-child(4) {
+    display: block;
+    top: 12.12rem;
+    right: min(7.44rem, 1.5vw);
+    max-height: 46rem;
+  }
+}
+@media (min-width: 100em) {
+  main .about__wrapper .about__images img:nth-child(1) {
+    right: min(39.87rem, 34vw);
+    max-height: 70rem;
+  }
+  main .about__wrapper .about__images img:nth-child(2) {
+    right: min(29rem, 24vw);
+    max-height: 67.5rem;
+  }
+  main .about__wrapper .about__images img:nth-child(3) {
+    right: min(18.3rem, 14vw);
+    max-height: 62.5rem;
+  }
+  main .about__wrapper .about__images img:nth-child(4) {
+    right: min(7.44rem, 4vw);
+    max-height: 65rem;
+  }
+}
+@media (min-width: 115em) {
+  main .about__wrapper .about__images img:nth-child(1) {
+    right: 39.87rem;
+    max-height: 76.9375rem;
+  }
+  main .about__wrapper .about__images img:nth-child(2) {
+    right: 29rem;
+    max-height: 74.5rem;
+  }
+  main .about__wrapper .about__images img:nth-child(3) {
+    right: 18.3rem;
+    max-height: 69.125rem;
+  }
+  main .about__wrapper .about__images img:nth-child(4) {
+    right: 7.44rem;
+    max-height: 71.8125rem;
+  }
 }
 
 .popup {

@@ -19,8 +19,8 @@ const servicesSlider = () => {
       },
     },
     slideToClickedSlide: true,
-    //hashNavigation: true,
-    //replaceState: true,
+    hashNavigation: true,
+    replaceState: true,
   });
 
   const swiperText = new Swiper(".services__slider-text", {
