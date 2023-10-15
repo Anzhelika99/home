@@ -6,6 +6,8 @@ const smoothScroll = () => {
   const scrollServices = document.querySelectorAll(".scroll-services");
   const scrollAbout = document.querySelectorAll(".scroll-about");
   const scrollReview = document.querySelectorAll(".scroll-reviews");
+  const scrollContacts = document.querySelectorAll(".scroll-contacts");
+  const scrollForm = document.querySelectorAll(".scroll-form");
 
   scrollTop.forEach((elem) => {
     elem.addEventListener("click", (event) => {
@@ -13,7 +15,6 @@ const smoothScroll = () => {
 
       seamless.scrollIntoView(document.querySelector(".header"), {
         behavior: "smooth",
-        //block: "top",
         inline: "center",
       });
 
@@ -33,7 +34,6 @@ const smoothScroll = () => {
 
       seamless.scrollIntoView(document.querySelector(".services"), {
         behavior: "smooth",
-        //block: "center",
         inline: "center",
       });
       if (
@@ -52,7 +52,6 @@ const smoothScroll = () => {
 
       seamless.scrollIntoView(document.querySelector(".about"), {
         behavior: "smooth",
-        //block: "center",
         inline: "center",
       });
       if (
@@ -83,6 +82,36 @@ const smoothScroll = () => {
       } // Проверяем, есть ли активный класс у меню и гамбургера для закрытия
     });
   });
+
+  scrollContacts.forEach((elem) => {
+    elem.addEventListener("click", (event) => {
+      event.preventDefault();
+
+      seamless.scrollIntoView(document.querySelector(".contacts"), {
+        behavior: "smooth",
+        inline: "center",
+      });
+      if (
+        hamburger.classList.value === "hamb__field active" &&
+        popup.classList.value === "popup-menu open"
+      ) {
+        hamburger.classList.remove("active");
+        popup.classList.remove("open");
+      } // Проверяем, есть ли активный класс у меню и гамбургера для закрытия
+    });
+  });
+
+  scrollForm.forEach((elem) => {
+    elem.addEventListener("click", (event) => {
+      event.preventDefault();
+
+      seamless.scrollIntoView(document.querySelector(".form"), {
+        behavior: "smooth",
+        inline: "center",
+      });
+    });
+  });
+
 
 };
 

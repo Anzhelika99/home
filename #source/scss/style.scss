@@ -26,7 +26,6 @@ body {
   color: #ffffff;
   background-color: $bg-dark;
   background-size: 100%;
-
 }
 
 body.lock {
@@ -1749,7 +1748,7 @@ header {
       padding: 4.94rem 2.62rem 11.87rem 2.62rem;
     }
     @media (min-width: 80em) {
-      padding: 6.94rem 3.37rem 11.25rem 3.37rem;
+      padding: 6.94rem 3.37rem 11.25rem 3rem;
     }
 
     & .review {
@@ -1833,6 +1832,33 @@ header {
         }
       }
     }
+
+    &__popaps {
+      & .popup__body {
+        padding: 4rem 2rem;
+      }
+
+      & .popup__close {
+        right: -1.5rem;
+        top: -3.5rem;
+
+        @media (min-width: 58.75em) {
+          right: -4rem;
+          top: 0;
+        }
+      }
+
+      & .reviews__popap-img {
+        //width: 100%;
+        //height: 100%;
+
+        & img {
+          width: 100%;
+          height: 100%;
+          //object-fit: cover;
+        }
+      }
+    }
   }
 
   .accordion {
@@ -1846,18 +1872,15 @@ header {
       width: max(80%, 17.5rem);
       margin: 0 0 1.75rem 0;
       padding: 1.62rem;
-      background: radial-gradient(
-        7267.29% 127.25% at 0% 21.31%,
-        #272727 0%,
-        rgba(217, 217, 217, 0) 100%
-      );
+      background: url(../img/Rectangle33.png) no-repeat;
+      background-size: cover;
       font-size: 0.875rem;
       line-height: normal;
       text-align: center;
 
       @media (min-width: 58.75em) {
         font-size: 1.25rem;
-        width: 100%;
+        width: 80vw;
         padding: 2.26rem 10rem;
       }
       @media (min-width: 80em) {
@@ -1879,7 +1902,6 @@ header {
         @media (min-width: 58.75em) {
           margin: 0 0 1rem 0;
         }
-
       }
 
       &-text {
@@ -1905,7 +1927,7 @@ header {
         bottom: 0.66rem;
         left: 50%;
         transform: translateX(-50%);
-        transition: all 0.4s ease-in-out;
+        transition: all 0.4s;
         background-size: contain;
         @media (min-width: 58.75em) {
           width: 3.36481rem;
@@ -1923,6 +1945,127 @@ header {
       }
     }
   }
+
+  .form {
+    position: relative;
+    padding: 4.06rem 2rem 3.63rem 2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    @media (min-width: 58.75em) {
+      padding: 17.18rem 0 22.19rem 0;
+    }
+    @media (min-width: 80em) {
+      padding: 12.38rem 0 15.98rem 0;
+    }
+
+    &__title {
+      color: #c1b190;
+      text-align: center;
+      font-size: 1.25rem;
+      line-height: 119%;
+      letter-spacing: 0.00625rem;
+      margin: 0 0 0.6rem 0;
+
+      @media (min-width: 58.75em) {
+        font-size: 3rem;
+        line-height: 140.504%;
+        letter-spacing: 0.015rem;
+        margin: 0 0 2rem 0;
+        max-width: 63.4915rem;
+      }
+    }
+
+    &__text {
+      text-align: center;
+      font-size: 0.75rem;
+      font-weight: 400;
+      line-height: 180%;
+
+      @media (min-width: 58.75em) {
+        font-size: 1.25rem;
+        max-width: 43.875rem;
+      }
+    }
+
+    & form {
+      font-family: "Unbounded", sans-serif;
+      font-size: 0.875rem;
+      line-height: normal;
+      width: max(16.4375rem, 50vw);
+      margin: 1.06rem 0 0 0;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      & input {
+        color: #25292c;
+        width: 100%;
+        min-height: 2.125rem;
+        background-color: #b9b9bb;
+        margin: 0 0 1rem 0;
+        padding: 0.63rem 0 0.62rem 0.52rem;
+      }
+      & textarea {
+        color: #25292c;
+        width: 100%;
+        min-height: 2.125rem;
+        background-color: #b9b9bb;
+        padding: 0.63rem 0 0.62rem 0.52rem;
+        resize: vertical;
+      }
+
+      & button {
+        position: relative;
+        margin: 1.75rem 0 0 0;
+
+        background-color: $bg-dark;
+
+        padding: 0.88rem 1.88rem;
+
+        font-family: 'Montserrat', sans-serif;
+        color: #ffffff;
+        font-size: 0.75rem;
+        font-weight: 300;
+        line-height: normal;
+        font-variant: small-caps;
+        letter-spacing: 0.0525rem;
+
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            z-index: -1;
+  
+            background-size: 200%;
+            background-image: linear-gradient(
+              45deg,
+              #c82e18,
+              #fb6b49,
+              #f29a68,
+              #ffd0a1
+            );
+  
+            -webkit-animation: animateborder 3s ease infinite;
+            animation: animateborder 3s ease infinite;
+  
+            top: -0.06em;
+            left: -0.05em;
+            width: calc(100% + 0.1em);
+            height: calc(100% + 0.1em);
+          }
+      }
+    }
+  }
+}
+
+.footer {
+  height: 500px;
+  background-color: #232429;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .popup {
@@ -2011,8 +2154,4 @@ header {
 .swiper-button-next:after,
 .swiper-button-prev:after {
   display: none;
-}
-
-.margin {
-  height: 500px;
 }

@@ -8,10 +8,21 @@ const reviewsSlider = () => {
     },
     loop: true,
     breakpoints: {
+      560: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+        loop: true,
+      },
       760: {
         slidesPerView: "auto",
         spaceBetween: 53,
         loop: false,
+      },
+      1900: {
+        slidesPerView: "auto",
+        spaceBetween: 53,
+        loop: false,
+        allowTouchMove: false,
       },
     },
   });
