@@ -3,21 +3,25 @@
   font-weight: 600;
   font-family: "EdgeLine";
   src: url("../fonts/edgeline_demibold.woff"), url("../fonts/edgeline_demibold.eot?#iefix") format("embedded-opentype"), url("../fonts/edgeline_demibold.ttf") format("truetype");
+  font-display: swap;
 }
 @font-face {
   font-family: "Unbounded";
   font-weight: 400;
   src: url("../fonts/Unbounded.woff"), url("../fonts/Unbounded.eot?#iefix") format("embedded-opentype"), url("../fonts/Unbounded.ttf") format("truetype");
+  font-display: swap;
 }
 @font-face {
   font-family: "Gotham Pro";
   font-weight: 400;
   src: url("../fonts/gothampro_regular.woff"), url("../fonts/gothampro_regular.eot?#iefix") format("embedded-opentype"), url("../fonts/gothampro_regular.ttf") format("truetype");
+  font-display: swap;
 }
 @font-face {
   font-family: "RubikOne";
   font-weight: 400;
   src: url("../fonts/RubikOne-Regular.woff"), url("../fonts/RubikOne-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/RubikOne-Regular.ttf") format("truetype");
+  font-display: swap;
 }
 /*Обнуление*/
 * {
@@ -1665,7 +1669,10 @@ main .galery .popup__galery .swiper__galery .swiper__nav .galery__button-prev,
 main .galery .popup__galery .swiper__galery .swiper__nav .galery__button-next {
   position: static;
   margin: 0 2rem;
-  cursor: pointer;
+}
+main .galery .popup__galery .swiper__galery .swiper__nav .galery__button-prev:hover,
+main .galery .popup__galery .swiper__galery .swiper__nav .galery__button-next:hover {
+  position: static;
 }
 main .about__wrapper {
   position: relative;
@@ -2059,6 +2066,157 @@ main .about__wrapper .about__images img {
   main .about__wrapper .about__images img:nth-child(4) {
     right: 7.44rem;
     max-height: 71.8125rem;
+  }
+}
+main .reviews {
+  position: relative;
+  padding: 7.75rem 0 5.69rem 0;
+}
+@media (min-width: 47.5em) {
+  main .reviews {
+    padding: 7.75rem 2rem 5.69rem 2rem;
+  }
+}
+@media (min-width: 58.75em) {
+  main .reviews {
+    padding: 4.94rem 2.62rem 11.87rem 2.62rem;
+  }
+}
+@media (min-width: 80em) {
+  main .reviews {
+    padding: 6.94rem 3.37rem 11.25rem 3.37rem;
+  }
+}
+main .reviews .review {
+  border: 1px solid #e5a990;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0d0d0d), to(#272727));
+  background: linear-gradient(180deg, #0d0d0d 0%, #272727 100%);
+  padding: 6.38rem 0.87rem 0.87rem 0.75rem;
+  max-width: 13.375rem;
+  min-height: 26.875rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+main .reviews .review__img {
+  position: absolute;
+  top: -4.935rem;
+}
+main .reviews .review__name {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: normal;
+  padding-bottom: 0.12em;
+}
+main .reviews .review__sity {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: normal;
+  padding-bottom: 0.7rem;
+}
+main .reviews .review__text {
+  font-size: 0.6875rem;
+  font-weight: 300;
+  line-height: normal;
+}
+main .reviews .review__link {
+  display: block;
+  text-align: right;
+  color: #e5a990;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: normal;
+}
+main .reviews .swiper__reviews {
+  width: 100%;
+  height: 100%;
+}
+main .reviews .swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 13.375rem;
+}
+main .reviews .swiper__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-top: 4.31rem;
+}
+main .reviews .swiper__nav .reviews__button-prev:hover, main .reviews .swiper__nav .reviews__button-next:hover {
+  cursor: pointer;
+}
+@media (min-width: 58.75em) {
+  main .reviews .swiper__nav {
+    display: none;
+  }
+}
+main .reviews__line {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  z-index: -1;
+}
+main .reviews__line1 {
+  right: 0.95rem;
+}
+main .reviews__line2 {
+  left: 0.95rem;
+}
+main .reviews__line3, main .reviews__line4 {
+  display: none;
+}
+@media (min-width: 58.75em) {
+  main .reviews__line1 {
+    left: 6.6875rem;
+  }
+  main .reviews__line2 {
+    left: 20.31rem;
+  }
+  main .reviews__line3 {
+    display: block;
+    right: 19.94rem;
+  }
+  main .reviews__line4 {
+    display: block;
+    right: 6.55rem;
+  }
+}
+@media (min-width: 80em) {
+  main .reviews__line1 {
+    left: 10.4375rem;
+  }
+  main .reviews__line2 {
+    left: min(37.9rem, 29vw);
+  }
+  main .reviews__line3 {
+    right: min(36.56rem, 29vw);
+  }
+  main .reviews__line4 {
+    right: 10.4375rem;
   }
 }
 
