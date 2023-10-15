@@ -4,26 +4,9 @@ const popupOpen = () => {
   const body = document.querySelector("body");
   const popupCloseImg = document.querySelectorAll(".close-popup");
 
-  let unlock = true;
+  let unlock = true; //Для отключения скролла под попапом
 
-  const timeout = 400;
-
-  popupLinks.forEach((elem) => {
-    elem.addEventListener("click", (e) => {
-      const popupName = elem.getAttribute("href").replace("#", "");
-      const currPopup = document.getElementById(popupName);
-      popupOpen(currPopup);
-      e.preventDefault();
-    });
-  });
-
-  popupCloseImg.forEach((elem) => {
-    elem.addEventListener("click", (e) => {
-      popupClose(elem.closest(".popup"));
-
-      e.preventDefault();
-    });
-  });
+  const timeout = 400; //Время анимации закрытия попап-окна
 
   const popupOpen = (currPopup) => {
     if (currPopup && unlock) {
@@ -37,7 +20,7 @@ const popupOpen = () => {
 
       currPopup.classList.add("open");
       currPopup.addEventListener("click", (event) => {
-        if (!event.target.closest(".popup__content")) {
+        if (!event.target.closest(".popup__content")) { //Клик вне попаппа закрывает окно
           popupClose(event.target.closest(".popup"));
         }
       });
@@ -55,7 +38,7 @@ const popupOpen = () => {
 
   const bodyLock = () => {
     const lockPaddingValue =
-      window.innerWidth - document.querySelector(".wrapper").offsetWidth + "px";
+      window.innerWidth - document.querySelector(".wrapper").offsetWidth + "px"; //Убираем скачек при отключении скролла
 
     body.style.paddingRight = lockPaddingValue;
     body.classList.add("lock");
@@ -76,6 +59,24 @@ const popupOpen = () => {
       unlock = true;
     }, timeout);
   };
+
+  popupLinks.forEach((elem) => {
+    elem.addEventListener("click", (e) => {
+      const popupName = elem.getAttribute("href").replace("#", "");
+      const currPopup = document.getElementById(popupName);
+      popupOpen(currPopup);
+      e.preventDefault();
+    });
+  });
+
+  popupCloseImg.forEach((elem) => {
+    elem.addEventListener("click", (e) => {
+      popupClose(elem.closest(".popup"));
+
+      e.preventDefault();
+    });
+  });
+
   //Полифил
   (function () {
     if (!Element.prototype.closest) {

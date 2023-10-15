@@ -24,6 +24,7 @@
     <script src="./js/galerySlider.js" defer></script>
     <script src="./js/smoothScroll.js" defer></script>
     <script src="./js/revievsSlider.js" defer></script>
+    <script src="./js/accordionQuestions.js" defer></script>
   </head>
   <body>
     <div class="wrapper">
@@ -96,7 +97,9 @@
                 <li><a href="#services" class="scroll-services">Услуги</a></li>
                 <li><a href="#about-us" class="scroll-about">О нас</a></li>
                 <li><a href="#reviews" class="scroll-reviews">Отзывы</a></li>
-                <li><a href="#contacts" class="scroll-contacts">Контакты</a></li>
+                <li>
+                  <a href="#contacts" class="scroll-contacts">Контакты</a>
+                </li>
               </ul>
             </div>
           </nav>
@@ -115,7 +118,7 @@
         </section>
       </header>
 
-      <main>
+      <main class="main">
         <div class="promo">
           <div class="promo__wrap">
             <a href="#form" class="promo__link button">
@@ -1411,10 +1414,10 @@
               </p>
             </div>
           </div>
-          <div class="stages__line line"></div>
-          <div class="stages__line2 line"></div>
-          <div class="stages__line3 line"></div>
-          <div class="stages__line4 line"></div>
+          <div class="main__line main__line1 line"></div>
+          <div class="main__line main__line2 line"></div>
+          <div class="main__line main__line3 line"></div>
+          <div class="main__line main__line4 line"></div>
         </div>
 
         <section class="portfolio">
@@ -1430,10 +1433,10 @@
               </p>
             </a>
           </div>
-          <div class="galery__line galery__line1 line"></div>
-          <div class="galery__line galery__line2 line"></div>
-          <div class="galery__line galery__line3 line"></div>
-          <div class="galery__line galery__line4 line"></div>
+          <div class="main__line main__line1 line"></div>
+          <div class="main__line main__line2 line"></div>
+          <div class="main__line main__line3 line"></div>
+          <div class="main__line main__line4 line"></div>
 
           <div class="popup popup__galery" id="popup-galery">
             <div class="popup__body">
@@ -1677,10 +1680,10 @@
               дополнительную информацию о наших услугах и ценах.
             </p>
           </section>
-          <div class="about__line-vertical about__line-vertical1 line"></div>
-          <div class="about__line-vertical about__line-vertical2 line"></div>
-          <div class="about__line-vertical about__line-vertical3 line"></div>
-          <div class="about__line-vertical about__line-vertical4 line"></div>
+          <div class="main__line main__line1 line"></div>
+          <div class="main__line main__line2 line"></div>
+          <div class="main__line main__line3 line"></div>
+          <div class="main__line main__line4 line"></div>
           <div
             class="about__line-horizontal about__line-horizontal1 line"
           ></div>
@@ -1709,7 +1712,6 @@
         </div>
 
         <div class="reviews">
-          <!--<div class="reviews__wrapper">-->
           <div class="swiper__reviews">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
@@ -1879,11 +1881,67 @@
               </div>
             </div>
           </div>
-          <!--</div>-->
-          <div class="reviews__line reviews__line1 line"></div>
-          <div class="reviews__line reviews__line2 line"></div>
-          <div class="reviews__line reviews__line3 line"></div>
-          <div class="reviews__line reviews__line4 line"></div>
+          <div class="main__line main__line1 line"></div>
+          <div class="main__line main__line2 line"></div>
+          <div class="main__line main__line3 line"></div>
+          <div class="main__line main__line4 line"></div>
+        </div>
+
+        <div class="accordion">
+          <div class="accordion__item ">
+            <div class="accordion__item-title">Каковы условия оплаты?</div>
+            <p class="accordion__item-text">
+              Условия оплаты обговариваются индивидуально с каждым клиентом. Мы
+              готовы предложить различные варианты оплаты, учитывая ваши
+              возможности и предпочтения.
+            </p>
+          </div>
+          <div class="accordion__item">
+            <div class="accordion__item-title">
+              Какие гарантии предоставляете?
+            </div>
+            <p class="accordion__item-text">
+              -Отделочные работы 1 год <br />Строительство 5 лет<br />
+              Электромонтажные и сварочные работы 1 год <br />В случае
+              возникновения проблем, мы оперативно решаем их в соответствии с
+              договором.
+            </p>
+          </div>
+          <div class="accordion__item">
+            <div class="accordion__item-title">
+              Можете ли вы предоставить смету на выполнение работ?
+            </div>
+            <p class="accordion__item-text">
+              Да, мы можем предоставить вам смету на выполнение работ.
+              Обратитесь к нам для консультации и оценки стоимости проекта.
+            </p>
+          </div>
+          <div class="accordion__item">
+            <div class="accordion__item-title">
+              Возможно ли начать строительство в зимнее время года или надо
+              ждать весну?
+            </div>
+            <p class="accordion__item-text">
+              Время года на начало строительства не влияет. Мы строим и зимой.
+            </p>
+          </div>
+          <div class="accordion__item">
+            <div class="accordion__item-title">
+              Строите дома только по типовым проектам, или у Вас можно заказать
+              дом по индивидуальному проекту?
+            </div>
+            <p class="accordion__item-text">
+              Мы можем построить дом и по Вашему проекту. Для просчета стоимости
+              конкретного дома от Вас нужны технические характеристики строения:
+              кол-во этажей, перегородок, высота потолка, форма крыши, материал
+              кровли и т.д.
+            </p>
+          </div>
+
+          <div class="main__line main__line1 line"></div>
+          <div class="main__line main__line2 line"></div>
+          <div class="main__line main__line3 line"></div>
+          <div class="main__line main__line4 line"></div>
         </div>
 
         <div class="margin"></div>
