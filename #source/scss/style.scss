@@ -26,7 +26,7 @@ body {
   color: #ffffff;
   background-color: $bg-dark;
   background-size: 100%;
-  user-select: none;
+
 }
 
 body.lock {
@@ -1774,6 +1774,9 @@ header {
         font-weight: 700;
         line-height: normal;
         padding-bottom: 0.12em;
+        @media (min-width: 80em) {
+          text-align: center;
+        }
       }
 
       &__sity {
@@ -1781,6 +1784,9 @@ header {
         font-weight: 300;
         line-height: normal;
         padding-bottom: 0.7rem;
+        @media (min-width: 80em) {
+          text-align: center;
+        }
       }
       &__text {
         font-size: 0.6875rem;
@@ -1879,15 +1885,15 @@ header {
       &-text {
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.8s;
+        transition: max-height 0.4s ease-in-out;
       }
       &.active .accordion__item-text {
         max-height: 10rem;
       }
 
-      &.active:hover {
-        cursor: initial;
-      }
+      //&.active:hover {
+      //  cursor: initial;
+      //}
 
       &::after {
         content: "";
@@ -1899,7 +1905,7 @@ header {
         bottom: 0.66rem;
         left: 50%;
         transform: translateX(-50%);
-        transition: all 0.1s;
+        transition: all 0.4s ease-in-out;
         background-size: contain;
         @media (min-width: 58.75em) {
           width: 3.36481rem;
@@ -1912,7 +1918,8 @@ header {
         }
       }
       &.active::after {
-        opacity: 0;
+        //opacity: 0;
+        transform: rotate(180deg) translateX(50%);
       }
     }
   }

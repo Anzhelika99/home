@@ -3,13 +3,10 @@ const accordionQuestions = () => {
 
   accordionItems.forEach(elem => {
     elem.addEventListener("click", () => {
-      elem.classList.add("active");
+      elem.classList.toggle("active");
     });
   })
 
-  document.addEventListener("contextmenu", (event) => {
-    event.preventDefault();
-  });
 
   document.ondragstart = noselect;
   // запрет на перетаскивание

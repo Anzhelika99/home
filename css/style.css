@@ -117,10 +117,6 @@ body {
   color: #ffffff;
   background-color: #0d0d0d;
   background-size: 100%;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
 }
 
 body.lock {
@@ -2062,11 +2058,21 @@ header .header-screen__dark {
   line-height: normal;
   padding-bottom: 0.12em;
 }
+@media (min-width: 80em) {
+  .main .reviews .review__name {
+    text-align: center;
+  }
+}
 .main .reviews .review__sity {
   font-size: 1rem;
   font-weight: 300;
   line-height: normal;
   padding-bottom: 0.7rem;
+}
+@media (min-width: 80em) {
+  .main .reviews .review__sity {
+    text-align: center;
+  }
 }
 .main .reviews .review__text {
   font-size: 0.6875rem;
@@ -2170,14 +2176,11 @@ header .header-screen__dark {
 .main .accordion__item-text {
   max-height: 0;
   overflow: hidden;
-  -webkit-transition: max-height 0.8s;
-  transition: max-height 0.8s;
+  -webkit-transition: max-height 0.4s ease-in-out;
+  transition: max-height 0.4s ease-in-out;
 }
 .main .accordion__item.active .accordion__item-text {
   max-height: 10rem;
-}
-.main .accordion__item.active:hover {
-  cursor: initial;
 }
 .main .accordion__item::after {
   content: "";
@@ -2190,8 +2193,8 @@ header .header-screen__dark {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  -webkit-transition: all 0.1s;
-  transition: all 0.1s;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
   background-size: contain;
 }
 @media (min-width: 58.75em) {
@@ -2208,7 +2211,8 @@ header .header-screen__dark {
   }
 }
 .main .accordion__item.active::after {
-  opacity: 0;
+  -webkit-transform: rotate(180deg) translateX(50%);
+          transform: rotate(180deg) translateX(50%);
 }
 
 .popup {
