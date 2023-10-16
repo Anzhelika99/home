@@ -1,0 +1,228 @@
+@charset "UTF-8";
+@font-face {
+  font-weight: 600;
+  font-family: "EdgeLine";
+  src: url("../fonts/edgeline_demibold.woff"), url("../fonts/edgeline_demibold.eot?#iefix") format("embedded-opentype"), url("../fonts/edgeline_demibold.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Unbounded";
+  font-weight: 400;
+  src: url("../fonts/Unbounded.woff"), url("../fonts/Unbounded.eot?#iefix") format("embedded-opentype"), url("../fonts/Unbounded.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gotham Pro";
+  font-weight: 400;
+  src: url("../fonts/gothampro_regular.woff"), url("../fonts/gothampro_regular.eot?#iefix") format("embedded-opentype"), url("../fonts/gothampro_regular.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "RubikOne";
+  font-weight: 400;
+  src: url("../fonts/RubikOne-Regular.woff"), url("../fonts/RubikOne-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/RubikOne-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+li {
+  list-style: none;
+}
+
+/*--------------------*/
+html {
+  font-size: max(16px, 1vw + 0.753em);
+}
+@media (min-width: 58.75em) {
+  html {
+    font-size: max(16px, 1vw + 0.3625em);
+  }
+}
+@media (min-width: 80em) {
+  html {
+    font-size: max(16px, 1vw - 0.2em);
+  }
+}
+
+body {
+  position: relative;
+  z-index: 0;
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+  background-color: #0d0d0d;
+  background-size: 100%;
+}
+
+body .wrapper {
+  overflow: hidden;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.57) 0.52%, rgba(0, 0, 0, 0.74) 40.63%, rgba(0, 0, 0, 0.81) 59.38%, rgba(0, 0, 0, 0.88) 77.6%, #000 97.4%), url(../img/mobile-bg.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+@media (min-width: 58.75em) {
+  .wrapper {
+    background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.26) 0%, rgba(0, 0, 0, 0.6) 30.73%, rgba(0, 0, 0, 0.8) 53.65%, rgba(0, 0, 0, 0.87) 75%, #000 100%), url(../img/bg-pc.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+@media (min-width: 80em) {
+  .wrapper {
+    background: radial-gradient(50% 50% at 50% 50%, rgba(13, 13, 13, 0.71) 0%, rgba(13, 13, 13, 0.81) 25.69%, rgba(13, 13, 13, 0.77) 49.65%, rgba(13, 13, 13, 0.89) 65.63%, #0d0d0d 100%), url(../img/bg-pc.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+.error {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+.error__title {
+  color: #f3eeee;
+  font-family: "Unbounded", sans-serif;
+  font-size: 4rem;
+  line-height: normal;
+  text-transform: uppercase;
+}
+@media (min-width: 58.75em) {
+  .error__title {
+    font-size: 12.5rem;
+  }
+}
+.error__text {
+  padding: 0.63rem 0 2.31rem 0;
+  font-family: "Unbounded", sans-serif;
+  font-size: 1rem;
+  line-height: normal;
+  text-transform: uppercase;
+}
+@media (min-width: 58.75em) {
+  .error__text {
+    font-size: 2.5rem;
+    padding: 1.5rem 0 3.31rem 0;
+  }
+}
+@media (min-width: 80em) {
+  .error__text {
+    font-size: 3rem;
+    padding: 2rem 0 3.8rem 0;
+  }
+}
+.error__btn {
+  padding: 0.63rem 2.6rem;
+  color: #ffffff;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  border: 1px solid #f6804f;
+}
+@media (min-width: 58.75em) {
+  .error__btn {
+    font-size: 2rem;
+    padding: 1.2rem 3.3rem;
+    border: 4px solid #F6804F;
+  }
+}
+@media (min-width: 80em) {
+  .error__btn {
+    font-size: 2.25rem;
+    padding: 1rem 2.37rem;
+  }
+}

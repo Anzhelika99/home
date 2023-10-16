@@ -107,6 +107,7 @@ const smoothScroll = () => {
 
       seamless.scrollIntoView(document.querySelector(".form"), {
         behavior: "smooth",
+        block: "center",
         inline: "center",
       });
     });

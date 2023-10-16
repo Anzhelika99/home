@@ -1,0 +1,133 @@
+@import "fonts";
+@import "reset";
+
+$bg-dark: #0d0d0d;
+
+html {
+  font-size: max(16px, calc(1vw + 0.753em));
+
+  @media (min-width: 58.75em) {
+    font-size: max(16px, calc(1vw + 0.3625em));
+  }
+
+  @media (min-width: 80em) {
+    font-size: max(16px, calc(1vw - 0.2em));
+  }
+}
+
+body {
+  position: relative;
+  z-index: 0;
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+  background-color: $bg-dark;
+  background-size: 100%;
+}
+
+body .wrapper {
+  overflow: hidden;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(0, 0, 0, 0.57) 0.52%,
+      rgba(0, 0, 0, 0.74) 40.63%,
+      rgba(0, 0, 0, 0.81) 59.38%,
+      rgba(0, 0, 0, 0.88) 77.6%,
+      #000 97.4%
+    ),
+    url(../img/mobile-bg.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @media (min-width: 58.75em) {
+    background: radial-gradient(
+        50% 50% at 50% 50%,
+        rgba(0, 0, 0, 0.26) 0%,
+        rgba(0, 0, 0, 0.6) 30.73%,
+        rgba(0, 0, 0, 0.8) 53.65%,
+        rgba(0, 0, 0, 0.87) 75%,
+        #000 100%
+      ),
+      url(../img/bg-pc.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  @media (min-width: 80em) {
+    background: radial-gradient(
+        50% 50% at 50% 50%,
+        rgba(13, 13, 13, 0.71) 0%,
+        rgba(13, 13, 13, 0.81) 25.69%,
+        rgba(13, 13, 13, 0.77) 49.65%,
+        rgba(13, 13, 13, 0.89) 65.63%,
+        #0d0d0d 100%
+      ),
+      url(../img/bg-pc.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  &__title {
+    color: #f3eeee;
+    font-family: "Unbounded", sans-serif;
+    font-size: 4rem;
+    line-height: normal;
+    text-transform: uppercase;
+    @media (min-width: 58.75em) {
+      font-size: 12.5rem;
+    }
+
+  }
+
+  &__text {
+    padding: 0.63rem 0 2.31rem 0;
+    font-family: "Unbounded", sans-serif;
+    font-size: 1rem;
+    line-height: normal;
+    text-transform: uppercase;
+    @media (min-width: 58.75em) {
+      font-size: 2.5rem;
+      padding: 1.5rem 0 3.31rem 0;
+    }
+    @media (min-width: 80em) {
+      font-size: 3rem;
+      padding: 2rem 0 3.8rem 0;
+    }
+  }
+
+  &__btn {
+    padding: 0.63rem 2.6rem;
+    color: #ffffff;
+    font-size: 0.9375rem;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    border: 1px solid #f6804f;
+    @media (min-width: 58.75em) {
+      font-size: 2rem;
+      padding: 1.2rem 3.3rem;
+      border: 4px solid #F6804F;
+    }
+    @media (min-width: 80em) {
+      font-size: 2.25rem;
+      padding: 1rem 2.37rem;
+    }
+  }
+}

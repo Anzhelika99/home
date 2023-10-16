@@ -1833,7 +1833,7 @@ header {
       }
     }
 
-    &__popaps {
+    &__popups {
       & .popup__body {
         padding: 4rem 2rem;
       }
@@ -1847,8 +1847,18 @@ header {
           top: 0;
         }
       }
+      & .popup__content {
+        max-width: 20rem;
 
-      & .reviews__popap-img {
+        @media (min-width: 58.75em) {
+          max-width: 50vw;
+        }
+        @media (min-width: 80em) {
+          max-width: 40vw;
+        }
+      }
+
+      & .reviews__popup-img {
         //width: 100%;
         //height: 100%;
 
@@ -1872,7 +1882,7 @@ header {
       width: max(80%, 17.5rem);
       margin: 0 0 1.75rem 0;
       padding: 1.62rem;
-      background: url(../img/Rectangle33.png) no-repeat;
+      background: url(../img/Rectangle33.webp) no-repeat;
       background-size: cover;
       font-size: 0.875rem;
       line-height: normal;
@@ -1993,11 +2003,19 @@ header {
       font-family: "Unbounded", sans-serif;
       font-size: 0.875rem;
       line-height: normal;
-      width: max(16.4375rem, 50vw);
+      width: max(16.4375rem, 60vw);
       margin: 1.06rem 0 0 0;
       display: flex;
       align-items: center;
       flex-direction: column;
+
+      @media (min-width: 58.75em) {
+        margin: 4rem 0 0 0;
+        width: 44.6875rem;
+      }
+      @media (min-width: 80em) {
+        margin: 4.69rem 0 0 0;
+      }
 
       & input {
         color: #25292c;
@@ -2006,14 +2024,30 @@ header {
         background-color: #b9b9bb;
         margin: 0 0 1rem 0;
         padding: 0.63rem 0 0.62rem 0.52rem;
+
+        @media (min-width: 58.75em) {
+          margin: 0 0 1.93rem 0;
+          padding: 1.75rem 0 1.74rem 1.13rem;
+          min-height: 4.625rem;
+        }
+
+        &::placeholder {
+          color: #25292c;
+        }
       }
       & textarea {
         color: #25292c;
         width: 100%;
-        min-height: 2.125rem;
         background-color: #b9b9bb;
         padding: 0.63rem 0 0.62rem 0.52rem;
         resize: vertical;
+
+        @media (min-width: 58.75em) {
+          padding: 1.75rem 0 0 1.13rem;
+        }
+        &::placeholder {
+          color: #25292c;
+        }
       }
 
       & button {
@@ -2024,48 +2058,281 @@ header {
 
         padding: 0.88rem 1.88rem;
 
-        font-family: 'Montserrat', sans-serif;
+        font-family: "Montserrat", sans-serif;
         color: #ffffff;
         font-size: 0.75rem;
         font-weight: 300;
         line-height: normal;
-        font-variant: small-caps;
         letter-spacing: 0.0525rem;
 
+        @media (min-width: 58.75em) {
+          margin: 4.5rem 0 0 0;
+          padding: 2.06rem 5.19rem;
+          font-size: 1.5rem;
+        }
+
         &::after {
-            content: "";
-            display: block;
-            position: absolute;
-            z-index: -1;
-  
-            background-size: 200%;
-            background-image: linear-gradient(
-              45deg,
-              #c82e18,
-              #fb6b49,
-              #f29a68,
-              #ffd0a1
-            );
-  
-            -webkit-animation: animateborder 3s ease infinite;
-            animation: animateborder 3s ease infinite;
-  
-            top: -0.06em;
-            left: -0.05em;
-            width: calc(100% + 0.1em);
-            height: calc(100% + 0.1em);
-          }
+          content: "";
+          display: block;
+          position: absolute;
+          z-index: -1;
+
+          background-size: 200%;
+          background-image: linear-gradient(
+            45deg,
+            #c82e18,
+            #fb6b49,
+            #f29a68,
+            #ffd0a1
+          );
+
+          -webkit-animation: animateborder 3s ease infinite;
+          animation: animateborder 3s ease infinite;
+
+          top: -0.06em;
+          left: -0.05em;
+          width: calc(100% + 0.1em);
+          height: calc(100% + 0.1em);
+        }
+      }
+    }
+
+    & .success__popup {
+      & .popup__content {
+        width: max(15rem, 50vw);
+        min-height: max(10.36038rem, 30vw);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+        padding: 0.41rem 0.8rem 1.48rem 0.8rem;
+
+        @media (min-width: 58.75em) {
+          padding: 5rem 4rem 5rem 4rem;
+          width: 80vw;
+          height: 50vw;
+        }
+
+        @media (min-width: 80em) {
+          width: 68.5rem;
+          height: 47.3125rem;
+          padding: 9.62rem 11.75rem 6.75rem 11.75rem;
+        }
+      }
+
+      &-title {
+        font-size: 0.875rem;
+        line-height: normal;
+        text-transform: uppercase;
+
+        @media (min-width: 58.75em) {
+          font-size: 2rem;
+        }
+
+        @media (min-width: 80em) {
+          font-size: 3rem;
+        }
+      }
+      &-text {
+        font-size: 0.75rem;
+        line-height: normal;
+
+        @media (min-width: 58.75em) {
+          font-size: 1.5rem;
+        }
+
+        @media (min-width: 80em) {
+          font-size: 2rem;
+        }
+      }
+      &-btn {
+        display: block;
+        border: 1px solid #f6804f;
+        color: #fff;
+        font-size: 0.5625rem;
+        line-height: normal;
+        text-transform: uppercase;
+        padding: 0.2rem 0.3rem;
+
+        @media (min-width: 58.75em) {
+          padding: 1rem 1.5rem;
+          font-size: 1.5rem;
+        }
+
+        @media (min-width: 80em) {
+          font-size: 2.25rem;
+          padding: 1rem 2.3rem;
+        }
+      }
+
+      &-img {
+        max-width: 2.86038rem;
+        & img {
+          width: 100%;
+        }
+
+        @media (min-width: 58.75em) {
+          max-width: 10vw;
+        }
+
+        @media (min-width: 80em) {
+          max-width: 13.0625rem;
+        }
       }
     }
   }
 }
 
 .footer {
-  height: 500px;
   background-color: #232429;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem 1.2rem;
+    position: relative;
+
+    @media (min-width: 58.75em) {
+      padding: 2.6rem 5.8rem;
+    }
+
+    @media (min-width: 80em) {
+      padding: 4.88rem 15rem 1.94rem 15rem;
+    }
+  }
+
+  & a {
+    color: #ffffff;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 0.07rem;
+    margin: 0 0 2.19rem 0;
+
+    @media (min-width: 58.75em) {
+      font-size: 2rem;
+      letter-spacing: 0.14rem;
+      margin: 0 0 5.3rem 0;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    font-weight: 300;
+    line-height: normal;
+    width: max(60vw, 17rem);
+
+    @media (min-width: 58.75em) {
+      width: 100%;
+      font-size: 2rem;
+      letter-spacing: 0.14rem;
+      align-items: flex-end;
+    }
+    @media (min-width: 80em) {
+      align-items: start;
+    }
+  }
+
+  &__nav {
+    padding: 0 1rem 0 0;
+    & li {
+      padding: 0 0 0.25rem 0;
+      letter-spacing: 0.12rem;
+
+      @media (min-width: 58.75em) {
+        padding: 0 0 0.4rem 0;
+      }
+      @media (min-width: 80em) {
+        padding: 0 0 1.69rem 0;
+      }
+    }
+  }
+
+  &__contacts {
+    font-style: normal;
+    text-align: right;
+    letter-spacing: 0.0525rem;
+
+    @media (min-width: 58.75em) {
+      text-align-last: left;
+      min-width: 21rem;
+    }
+
+    & p {
+      padding: 0 0 0.63rem 0;
+
+      @media (min-width: 58.75em) {
+        padding: 0 0 1.5rem 0;
+
+        &:nth-child(3) {
+          line-height: 185.9%;
+          padding: 0;
+        }
+      }
+      @media (min-width: 80em) {
+        padding: 0 0 1.69rem 0;
+        &:nth-child(3) {
+          line-height: 185.9%;
+          padding: 0 0 1.19rem 0;
+        }
+        &:nth-child(4) {
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  &__policy {
+    display: none;
+    @media (min-width: 58.75em) {
+      display: block;
+    }
+  }
+
+  &__mail {
+    font-variant: small-caps;
+
+    @media (min-width: 58.75em) {
+      position: absolute;
+      top: 5.6rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @media (min-width: 80em) {
+      position: static;
+      transform: translate(0);
+    }
+  }
+
+  &__link {
+    font-size: 0.875rem;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 0.06125rem;
+    text-align: center;
+    margin: 1.56rem 0 0 0;
+
+    & a {
+      font-weight: 500;
+    }
+    @media (min-width: 58.75em) {
+      font-size: 2rem;
+      margin: 4.88rem 0 0 0;
+      max-width: 30.4375rem;
+    }
+    @media (min-width: 80em) {
+      max-width: 100%;
+    }
+  }
 }
 
 .popup {
