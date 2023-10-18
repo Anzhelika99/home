@@ -49,9 +49,108 @@ body .wrapper {
   }
 }
 
+@keyframes flare-telegramm {
+  0% {
+    left: -300%;
+  }
+  100% {
+    left: 300%;
+  }
+}
+
+@keyframes flare-phone {
+  0% {
+    left: -300%;
+  }
+  100% {
+    left: 300%;
+  }
+}
+
 .line {
   width: 1px;
   background-color: $line;
+}
+
+.vidgets {
+  position: fixed;
+  z-index: 100;
+  right: 1rem;
+  bottom: 2rem;
+
+  & .whatsapp {
+    position: relative;
+    overflow-x: hidden;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    margin-bottom: 1rem;
+
+    & .flayer {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 5rem;
+      transform: skewX(-45deg);
+      animation: flare-telegramm 2s infinite linear;
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0.2)
+      );
+      -webkit-transform: skewX(-45deg);
+      -moz-transform: skewX(-45deg);
+      -ms-transform: skewX(-45deg);
+      -o-transform: skewX(-45deg);
+      -webkit-animation: flare-telegramm 2s infinite linear;
+      -moz-animation: flare-telegramm 2s infinite linear;
+      -ms-animation: flare-telegramm 2s infinite linear;
+      -o-animation: flare-telegramm 2s infinite linear;
+    }
+  }
+
+  & .phone {
+    position: relative;
+    overflow-x: hidden;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+
+    & .flayer {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 2rem;
+      transform: skewX(-45deg);
+      animation: flare-phone 2s infinite linear;
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0.2)
+      );
+      -webkit-animation: flare-phone 2s infinite linear;
+      -moz-animation: flare-phone 2s infinite linear;
+      -ms-animation: flare-phone 2s infinite linear;
+      -o-animation: flare-phone 2s infinite linear;
+      -webkit-transform: skewX(-45deg);
+      -moz-transform: skewX(-45deg);
+      -ms-transform: skewX(-45deg);
+      -o-transform: skewX(-45deg);
+    }
+  }
+
+  @media (min-width: 58.75em) {
+    display: none;
+  }
+
 }
 
 header {
@@ -1291,21 +1390,20 @@ header {
     }
 
     &-previous__content {
-
       &-link {
-          display: none;
+        display: none;
 
-          @media (min-width: 80em) {
-            display: block;
-            position: absolute;
-            top: 47.6rem;
-            left: -7rem;
-            color: #fff;
-            text-align: right;
-            font-size: 0.9375rem;
-            font-weight: 300;
-          }
+        @media (min-width: 80em) {
+          display: block;
+          position: absolute;
+          top: 47.6rem;
+          left: -7rem;
+          color: #fff;
+          text-align: right;
+          font-size: 0.9375rem;
+          font-weight: 300;
         }
+      }
 
       @media (min-width: 80em) {
         overflow: hidden;
@@ -1317,13 +1415,10 @@ header {
           height: 100%;
         }
 
-        
-
         &-image img {
           width: 100%;
           height: 100%;
           object-fit: cover;
-
         }
         &-image1 img {
           object-position: 75%;
@@ -1340,7 +1435,6 @@ header {
         &-image5 img {
           object-position: 60%;
         }
-        
       }
     }
 
@@ -1468,7 +1562,6 @@ header {
           width: 100%;
           line-height: 145%;
         }
-        
       }
 
       &-result {
@@ -1562,6 +1655,16 @@ header {
             margin: 0 2rem 0 0;
           }
         }
+
+        @media (min-width: 80em) {
+          bottom: 6.56rem;
+          left: 45vw;
+        }
+        @media (min-width: 110em) {
+          bottom: 6.56rem;
+          left: 50vw;
+        }
+
       }
     }
     &__popup {

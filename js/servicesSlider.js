@@ -1,7 +1,7 @@
 const servicesSlider = () => {
   const swiperImg = new Swiper(".services__slider-img", {
-    slidesPerView: 1, 
-    spaceBetween: 5, 
+    slidesPerView: 1,
+    spaceBetween: 5,
     loop: true,
     navigation: {
       nextEl: ".swiper-button-next",
@@ -19,12 +19,11 @@ const servicesSlider = () => {
       },
     },
     slideToClickedSlide: true,
-
   });
 
   const swiperText = new Swiper(".services__slider-text", {
-    slidesPerView: 1, 
-    spaceBetween: 0, 
+    slidesPerView: 1,
+    spaceBetween: 0,
     loop: true,
     effect: "fade",
     fadeEffect: {
@@ -45,31 +44,53 @@ const servicesSlider = () => {
       },
     },
     allowTouchMove: false,
-
   });
 
   // Находим все ссылки с классом "swiper-link"
   const links = document.querySelectorAll(".swiper-link");
 
-  // Обработчик клика по ссылке
-  function handleLinkClick(event) {
-
-    links.forEach(function (link) {
-      link.classList.remove("active");
-    });
-
-    event.preventDefault(); // Предотвращаем переход по ссылке по умолчанию
-    const slideId = this.getAttribute("href").slice(1); // Получаем ID слайда из атрибута href ссылки
-
-    this.classList.add('active')
-    swiperImg.slideTo(slideId);
-    swiperText.slideTo(slideId);
-  }
 
   // Добавляем обработчик клика для каждой ссылки
   links.forEach(function (link) {
-    link.addEventListener("click", handleLinkClick);
+    link.addEventListener("click", (event) => {
+      event.preventDefault(); // Предотвращаем переход по ссылке по умолчанию
+
+      links.forEach(function (link) {
+        link.classList.remove("active");
+      });
+
+      const slideId = link.getAttribute("href").slice(1); // Получаем ID слайда из атрибута href ссылки
+
+      link.classList.add("active");
+      swiperImg.slideTo(slideId);
+      swiperText.slideTo(slideId);
+    });
   });
+
+
+  // Обработчик события "slideChange" для swiperImg
+  swiperImg.on("slideChange", function () {
+    // Удаляем класс active для всех ссылок
+    links.forEach((link) => link.classList.remove("active"));
+
+    // Получаем индекс текущего активного слайда
+    const activeIndex = swiperImg.realIndex;
+
+    // Добавляем класс active для ссылки, соответствующей текущему слайду
+    links[activeIndex].classList.add("active");
+  });
+
+  // Обработчик события "slideChange" для swiperText
+  //swiperText.on("slideChange", function () {
+  //  // Удаляем класс active для всех ссылок
+  //  links.forEach((link) => link.classList.remove("active"));
+
+  //  // Получаем индекс текущего активного слайда
+  //  const swiperTextActiveIndex = swiperText.realIndex;
+
+  //  // Добавляем класс active для ссылки, соответствующей текущему слайду
+  //  links[swiperTextActiveIndex].classList.add("active");
+  //});
 };
 
 servicesSlider();
