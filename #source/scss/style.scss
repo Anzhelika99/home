@@ -877,6 +877,7 @@ header {
                 font-style: normal;
                 font-weight: 300;
                 text-transform: uppercase;
+                transition: all 0.2s;
 
                 &.active {
                   font-weight: 700;
