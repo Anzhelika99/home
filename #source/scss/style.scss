@@ -150,7 +150,6 @@ body .wrapper {
   @media (min-width: 58.75em) {
     display: none;
   }
-
 }
 
 header {
@@ -829,7 +828,9 @@ header {
             }
           }
         }
+
       }
+
       @media (min-width: 58.75em) {
         display: none;
       }
@@ -886,8 +887,8 @@ header {
             }
           }
 
-          & .swiper-button-next,
-          .swiper-button-prev {
+          & .nav-btn-next,
+          .nav-btn-prev {
             position: static;
 
             & img {
@@ -1665,7 +1666,6 @@ header {
           bottom: 6.56rem;
           left: 50vw;
         }
-
       }
     }
     &__popup {
@@ -2797,19 +2797,20 @@ header {
 
   .swiper-button-next,
   .swiper-button-prev {
+    display: block;
     z-index: 0;
     top: min(4.25rem, 81px);
     width: auto;
-    display: flex;
-    justify-content: flex-end;
+
     height: auto;
   }
   .swiper-button-next {
     right: 1.69em;
   }
   .swiper-button-prev {
-    right: 4.68em;
-    justify-content: end;
+    left: initial;
+    right: max(4rem, 12vw);
+
   }
 }
 

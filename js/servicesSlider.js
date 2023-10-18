@@ -2,10 +2,10 @@ const servicesSlider = () => {
   const swiperImg = new Swiper(".services__slider-img", {
     slidesPerView: 1,
     spaceBetween: 5,
-    loop: true,
+    loop: false,
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".nav-btn-next",
+      prevEl: ".nav-btn-prev",
     },
     allowTouchMove: false,
     pagination: {
@@ -18,20 +18,19 @@ const servicesSlider = () => {
         ); // Отображать цифры
       },
     },
-    slideToClickedSlide: true,
   });
 
   const swiperText = new Swiper(".services__slider-text", {
     slidesPerView: 1,
     spaceBetween: 0,
-    loop: true,
+    loop: false,
     effect: "fade",
     fadeEffect: {
       crossFade: true,
     },
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".nav-btn-next",
+      prevEl: ".nav-btn-prev",
     },
     pagination: {
       el: ".swiper-pagination-pc",
@@ -73,11 +72,8 @@ const servicesSlider = () => {
     // Удаляем класс active для всех ссылок
     links.forEach((link) => link.classList.remove("active"));
 
-    // Получаем индекс текущего активного слайда
-    const activeIndex = swiperImg.realIndex;
-
     // Добавляем класс active для ссылки, соответствующей текущему слайду
-    links[activeIndex].classList.add("active");
+    links[swiperImg.realIndex].classList.add("active");
   });
 
   // Обработчик события "slideChange" для swiperText

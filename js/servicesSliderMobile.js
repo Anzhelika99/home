@@ -2,7 +2,6 @@ const servicesSliderMobile = () => {
   const swiperImgMobile = new Swiper(".swiper__image", {
     slidesPerView: 1, // Определите, сколько слайдов будет видно одновременно
     spaceBetween: 1, // Расстояние между слайдами
-    loop: true,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -23,7 +22,6 @@ const servicesSliderMobile = () => {
   const swiperMobile = new Swiper(".slider__links", {
     slidesPerView: 1, 
     spaceBetween: 0,
-    loop: true,
     effect: "fade",
     fadeEffect: {
       crossFade: true,
