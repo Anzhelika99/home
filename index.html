@@ -17,13 +17,14 @@
     />
     <link rel="stylesheet" href="./css/style.css" />
     <script src="./js/menu.js" defer></script>
+    <script src="./js/popupOpen.js" defer></script>
     <script src="./js/servicesSliderMobile.js" defer></script>
     <script src="./js/servicesSlider.js" defer></script>
-    <script src="./js/popupOpen.js" defer></script>
-    <script src="./js/animationFadeInUp.js" defer></script>
+    <script src="./js/portfolioSlider.js" defer></script>
     <script src="./js/galerySlider.js" defer></script>
-    <script src="./js/smoothScroll.js" defer></script>
     <script src="./js/revievsSlider.js" defer></script>
+    <script src="./js/animationFadeInUp.js" defer></script>
+    <script src="./js/smoothScroll.js" defer></script>
     <script src="./js/accordionQuestions.js" defer></script>
   </head>
   <body>
@@ -146,42 +147,45 @@
           <h2 class="services__title">наши услуги</h2>
 
           <div class="services__slider-mobile">
-            <div class="swiper__image">
-              <div class="swiper__nav">
-                <div class="swiper-pagination"></div>
+            <div class="services__slider-container">
 
-                <div class="swiper-button-prev button-slide">
-                  <img src="./img/navig/button-prev.svg" alt="Назад" />
+              <div class="swiper__image">
+                <div class="swiper__nav">
+                  <div class="swiper-pagination"></div>
+  
+                  <div class="swiper-button-prev button-slide">
+                    <img src="./img/navig/button-prev.svg" alt="Назад" />
+                  </div>
+                  <div class="swiper-button-next button-slide">
+                    <img src="./img/navig/button-next.svg" alt="Вперед" />
+                  </div>
                 </div>
-                <div class="swiper-button-next button-slide">
-                  <img src="./img/navig/button-next.svg" alt="Вперед" />
-                </div>
-              </div>
-
-              <div class="swiper-wrapper">
-                <div class="swiper-slide swiper-slide-image">
-                  <img
-                    src="./img/services-slider/slide1.webp"
-                    alt="Строительство домов,  коттеджей, бань"
-                  />
-                </div>
-                <div class="swiper-slide swiper-slide-image">
-                  <img
-                    src="./img/services-slider/slide2.webp"
-                    alt="Сварочные работы"
-                  />
-                </div>
-                <div class="swiper-slide swiper-slide-image">
-                  <img
-                    src="./img/services-slider/slide3.webp"
-                    alt="Электромонтажные работы"
-                  />
-                </div>
-                <div class="swiper-slide swiper-slide-image">
-                  <img
-                    src="./img/services-slider/slide4.webp"
-                    alt="отделочные работы"
-                  />
+  
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide swiper-slide-img">
+                    <img
+                      src="./img/services-slider/slide1.webp"
+                      alt="Строительство домов,  коттеджей, бань"
+                    />
+                  </div>
+                  <div class="swiper-slide swiper-slide-img">
+                    <img
+                      src="./img/services-slider/slide2.webp"
+                      alt="Сварочные работы"
+                    />
+                  </div>
+                  <div class="swiper-slide swiper-slide-img">
+                    <img
+                      src="./img/services-slider/slide3.webp"
+                      alt="Электромонтажные работы"
+                    />
+                  </div>
+                  <div class="swiper-slide swiper-slide-img">
+                    <img
+                      src="./img/services-slider/slide4.webp"
+                      alt="отделочные работы"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -268,6 +272,7 @@
                 >
               </div>
             </div>
+            
             <div class="services__slider-img">
               <div class="swiper-wrapper">
                 <div class="swiper-slide swiper-slide-image">
@@ -1422,6 +1427,499 @@
 
         <section class="portfolio">
           <h2>НАШИ РАБОТЫ</h2>
+
+          <div class="slider__portfolio">
+            <div class="slider__portfolio-container">
+              <div class="swiper__portfolio-info">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="swiper__portfolio-wrapper">
+                      <div class="swiper__portfolio-year">2019г</div>
+                      <div class="swiper__portfolio-client">
+                        Проект<br />
+                        для Михаила г. Калининград
+                      </div>
+                      <h3 class="swiper__portfolio-title">Стоительство бани</h3>
+                      <p class="swiper__portfolio-text">
+                        К нам обратился клиент Михаил, который мечтал о
+                        собственной бане на своем участке. Он рассказал нам о
+                        своих пожеланиях и требованиях, а мы предложили ему
+                        индивидуальный подход к проектированию и строительству.
+                      </p>
+                      <p class="swiper__portfolio-text">
+                        Сначала мы провели встречу с Михаилом, чтобы более
+                        детально обсудить его идеи и представления о будущей
+                        бане.
+                        <span class="swiper__portfolio-text-pc"
+                          >Он хотел, чтобы баня была просторной, с большой
+                          парной и комфортной зоной отдыха. Также он выразил
+                          желание иметь отдельный вход в парную.</span
+                        >
+                      </p>
+                      <p
+                        class="swiper__portfolio-text swiper__portfolio-text-pc"
+                      >
+                        После этого мы приступили к проектированию. Наша команда
+                        специалистов разработала несколько вариантов планировки,
+                        учитывая все пожелания. Мы предложили ему выбрать
+                        наиболее подходящий вариант, а затем внесли необходимые
+                        корректировки.
+                      </p>
+                      <p
+                        class="swiper__portfolio-text swiper__portfolio-text-pc"
+                      >
+                        После утверждения проекта мы приступили к строительству.
+                        Наша команда строителей профессионально выполнила все
+                        работы, начиная от фундамента и возведения стен, и
+                        заканчивая установкой кровли и окон. Мы использовали
+                        только качественные материалы, чтобы обеспечить
+                        надежность и долговечность бани.
+                      </p>
+                      <p
+                        class="swiper__portfolio-text swiper__portfolio-text-pc"
+                      >
+                        Параллельно с основными строительными работами мы
+                        занимались благоустройством, провели электромонтажные
+                        работы.
+                      </p>
+                      <div
+                        class="swiper__portfolio-result swiper__portfolio-text-pc"
+                      >
+                        В результате нашей работы Михаил получил свою мечту -
+                        просторную и уютную баню на своем участке. Он был очень
+                        доволен результатом и выразил благодарность нашей
+                        компании за профессионализм и качество работы.
+                      </div>
+                      <a
+                        href="#portfolio-popup1"
+                        class="swiper__portfolio-link popup-link"
+                        >далее</a
+                      >
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="swiper__portfolio-wrapper">
+                      <div class="swiper__portfolio-year">2020г</div>
+                      <div class="swiper__portfolio-client">
+                        Проект<br />
+                        для семьи Смирновых, п.Луговое
+                      </div>
+                      <h3 class="swiper__portfolio-title">Стоительство дома</h3>
+                      <p class="swiper__portfolio-text">
+                        Одним из наших клиентов была семья Смирновых, которая
+                        мечтала о просторном и современном доме, отражающем их
+                        индивидуальность и обеспечивающем комфортное проживание.
+                      </p>
+                      <p class="swiper__portfolio-text">
+                        Совместно с нашей командой мы разработали уникальный
+                        проект дома из монолита, полностью соответствующий
+                        пожеланиям и требованиям клиента.
+                      </p>
+                      <p class="swiper__portfolio-text">
+                        История постройки дома началась с проектирования.
+                        <span class="swiper__portfolio-text-pc"
+                          >Мы провели серьезный анализ участка, учли его
+                          особенности и взяли во внимание окружающую среду.
+                          Архитекторы разработали эргономичный и функциональный
+                          план дома, учитывая все потребности семьи. Был создан
+                          эскиз, на основе которого была проведена визуализация
+                          будущего дома. Клиент получил возможность представить
+                          себе результат и внести коррективы в дизайн и
+                          интерьер.</span
+                        >
+                      </p>
+                      <p
+                        class="swiper__portfolio-text swiper__portfolio-text-pc"
+                      >
+                        После утверждения проекта приступили к строительству. Мы
+                        использовали только качественные и проверенные
+                        материалы, чтобы обеспечить долговечность и надежность
+                        конструкции. Строительство дома из монолита требует
+                        высокой технологичности и строгого соблюдения процессов.
+                        Наша команда специалистов, имеющих большой опыт в данной
+                        области, тщательно следила за каждым этапом
+                        строительства. Результатом нашей работы стал прекрасный
+                        и современный дом для семьи.
+                      </p>
+
+                      <div
+                        class="swiper__portfolio-result swiper__portfolio-text-pc"
+                      >
+                        Монолитная конструкция позволила воплотить все
+                        архитектурные замыслы, а также обеспечила отличную
+                        тепло- и звукоизоляцию.
+                      </div>
+                      <a
+                        href="#portfolio-popup2"
+                        class="swiper__portfolio-link popup-link"
+                        >далее</a
+                      >
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="swiper__portfolio-wrapper">
+                      <div class="swiper__portfolio-year">2022г</div>
+                      <div class="swiper__portfolio-client">
+                        Проект<br />
+                        для Евгения, г. Калининград
+                      </div>
+                      <h3 class="swiper__portfolio-title">
+                        Стоительство коттеджа
+                      </h3>
+                      <p class="swiper__portfolio-text">
+                        Наш клиент Евгений хотел надёжный и прочный коттедж,
+                        который прослужит долгие годы.
+                      </p>
+                      <p class="swiper__portfolio-text">
+                        Мы начали работу с тщательного планирования и
+                        проектирования. После утверждения проекта мы приступили
+                        к строительству. Коттедж был построен из качественного
+                        кирпича, чтобы обеспечить надежность и долговечность
+                        конструкции.
+                      </p>
+                      <p
+                        class="swiper__portfolio-text swiper__portfolio-text-pc"
+                      >
+                        Мы использовали передовые технологии и современное
+                        оборудование, чтобы обеспечить высокое качество работ и
+                        точность в деталях.
+                      </p>
+                      <p
+                        class="swiper__portfolio-text swiper__portfolio-text-pc"
+                      >
+                        В процессе строительства мы сотрудничали с клиентом,
+                        предоставляя ему регулярные обновления о ходе работ и
+                        консультировали его по различным вопросам.
+                      </p>
+                      <p
+                        class="swiper__portfolio-text swiper__portfolio-text-pc"
+                      >
+                        Строительство коттеджа заняло некоторое время, но
+                        результат был того стоит. Когда дом был построен,
+                        Евгений был восторге от его внешнего вида и внутреннего
+                        оформления. Каждая комната была создана с любовью и
+                        вниманием к деталям. Коттедж оказался просторным и
+                        функциональным, идеально подходящим для семейного образа
+                        жизни.
+                      </p>
+                      <div
+                        class="swiper__portfolio-result swiper__portfolio-text-pc"
+                      >
+                        Евгений остался доволен нашей работой и нашим
+                        профессионализмом. Он получили не только красивый и
+                        уютный дом, но и прекрасный опыт сотрудничества с нами.
+                      </div>
+                      <a
+                        href="#portfolio-popup3"
+                        class="swiper__portfolio-link popup-link"
+                        >далее</a
+                      >
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="swiper__portfolio-wrapper">
+                      <div class="swiper__portfolio-year">2016г</div>
+                      <div class="swiper__portfolio-client">
+                        Проект<br />
+                        для Константина, г.Калининград
+                      </div>
+                      <h3 class="swiper__portfolio-title">Кованые изделия</h3>
+                      <p class="swiper__portfolio-text">
+                        Проект связанный с изготовлением кованного забора для
+                        Константина. Задачей было обеспечить надежную защиту
+                        территории.
+                      </p>
+                      <p class="swiper__portfolio-text">
+                        Мы провели комплексную оценку состояния территории и
+                        разработали индивидуальное решение, которое
+                        соответствует потребностям клиента.
+                      </p>
+                      <p class="swiper__portfolio-text">
+                        Совместно с нашим клиентом мы выбрали дизайн, который
+                        лучше всего подходил к стилю их дома и окружающей
+                        территории.
+                        <span class="swiper__portfolio-text-pc">
+                          Мы помогли им определиться с размерами и материалами,
+                          которые использовались для изготовления забора. Мы
+                          учли все пожелания и предоставили детальный план
+                          работ.</span
+                        >
+                      </p>
+                      <p
+                        class="swiper__portfolio-text swiper__portfolio-text-pc"
+                      >
+                        Работы по изготовлению кованого забора начались в
+                        оговоренные сроки. Наша команда профессионалов вложила
+                        всю свою энергию и мастерство в каждую деталь . Мы
+                        придавали большое значение деталям и использовали только
+                        высококачественные материалы.
+                      </p>
+                      <p
+                        class="swiper__portfolio-text swiper__portfolio-text-pc"
+                      >
+                        По завершении работ, мы были приятно удивлены
+                        результатом. Кованный забор превзошёл все наши ожидания.
+                        Он стал не только надежной защитой, но и настоящим
+                        произведением искусства.
+                      </p>
+                      <p
+                        class="swiper__portfolio-text swiper__portfolio-text-pc"
+                      >
+                        Новый забор вызвал восхищение у соседей и гостей нашего
+                        клиента. Они отметили его красоту и стильность, а также
+                        защитную функцию, которую он выполняет. Мы гордимся
+                        своей работой и благодарны нашему клиенту за то, что он
+                        доверил нам создание такого уникального изделия.
+                      </p>
+                      <div
+                        class="swiper__portfolio-result swiper__portfolio-text-pc"
+                      >
+                        Новый забор вызвал восхищение у соседей и гостей нашего
+                        клиента.
+                      </div>
+                      <a
+                        href="#portfolio-popup4"
+                        class="swiper__portfolio-link popup-link"
+                        >далее</a
+                      >
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="swiper__portfolio-wrapper">
+                      <div class="swiper__portfolio-year">2021г</div>
+                      <div class="swiper__portfolio-client">
+                        Проект<br />
+                        для Елены, г. Калининград
+                      </div>
+                      <h3 class="swiper__portfolio-title">
+                        Изготовление мебели
+                      </h3>
+                      <p class="swiper__portfolio-text">
+                        Наша команда специалистов успешно выполнила проект по
+                        созданию мебели для Елены.
+                      </p>
+                      <p class="swiper__portfolio-text">
+                        Наша задача была не просто изготовить стандартные
+                        предметы мебели, а создать что-то особенное, что будет
+                        соответствовать ее вкусу и потребностям. Начав работу
+                        над проектом, мы внимательно прослушали желания нашего
+                        заказчика и проанализировали пространство ее студии.
+                        <span class="swiper__portfolio-text-pc"
+                          >Стол, стулья и полки в разных размерах были основными
+                          элементами, которые нужно было создать. При разработке
+                          дизайна мы старались сочетать современные материалы с
+                          элементами промышленности.
+                        </span>
+                      </p>
+                      <p
+                        class="swiper__portfolio-text swiper__portfolio-text-pc"
+                      >
+                        Стол и стулья были сделаны из прочных металлических
+                        конструкций, а полки были выполнены из натурального
+                        дерева. Мы создали уникальный дизайн столешницы и спинок
+                        стульев, добавив несколько промышленных деталей, чтобы
+                        придать мебели особую привлекательность. Помимо дизайна,
+                        мы также учли потребности нашего клиента в
+                        функциональности. Размеры стола и полок были тщательно
+                        спланированы, чтобы максимально использовать
+                        пространство студии. Каждый элемент мебели был
+                        изготовлен с учетом эргономики, чтобы обеспечить комфорт
+                        и удобство при использовании. По завершению проекта мы
+                        доставили и установили созданную мебель в студию нашего
+                        клиента. Она была в полном восторге от результата и
+                        признала, что мы превзошли ее ожидания.
+                      </p>
+                      <div
+                        class="swiper__portfolio-result swiper__portfolio-text-pc"
+                      >
+                        Мы были рады помочь Елене воплотить ее желания в
+                        реальность и создать уникальное пространство в стиле
+                        лофт.
+                      </div>
+                      <a
+                        href="#portfolio-popup5"
+                        class="swiper__portfolio-link popup-link"
+                        >далее</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="slider__portfolio-container">
+              <div class="swiper__portfolio-images">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="swiper__portfolio-image swiper__portfolio-image1">
+                      <img
+                        src="./img/portfolio/portfolio-1.webp"
+                        alt="Стоительство бани"
+                      />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="swiper__portfolio-image swiper__portfolio-image2">
+                      <img
+                        src="./img/portfolio/portfolio-2.webp"
+                        alt="Стоительство дома"
+                      />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="swiper__portfolio-image swiper__portfolio-image3">
+                      <img
+                        src="./img/portfolio/portfolio-3.webp"
+                        alt="Стоительство коттеджа"
+                      />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="swiper__portfolio-image swiper__portfolio-image4">
+                      <img
+                        src="./img/portfolio/portfolio-4.webp"
+                        alt="Кованые изделия"
+                      />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="swiper__portfolio-image swiper__portfolio-image5">
+                      <img
+                        src="./img/portfolio/portfolio-5.webp"
+                        alt="Изготовление мебели"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper__portfolio-navig">
+              <div class="portfolio__button-prev">
+                <img src="./img/navig/galery-button-prev.svg" alt="Назад" />
+              </div>
+              <div class="portfolio__button-next">
+                <img src="./img/navig/galery-button-next.svg" alt="Вперед" />
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio__popups">
+            <div class="portfolio__popup popup" id="portfolio-popup1">
+              <div class="popup__body">
+                <div class="popup__content">
+                  <a href="#" class="popup__close close-popup"
+                    ><img
+                      src="./img/navig/button-popup-close.svg"
+                      alt="Закрыть"
+                  /></a>
+                  <div class="portfolio__popup-text">
+                    <p>
+                      Он хотел, чтобы баня была просторной, с большой парной и
+                      комфортной зоной отдыха. Также он выразил желание иметь
+                      отдельный вход в парную.
+                    </p>
+                    <p>
+                      После этого мы приступили к проектированию. Наша команда специалистов разработала несколько вариантов планировки, учитывая все пожелания. 
+                      Мы предложили ему выбрать наиболее подходящий вариант, а затем внесли необходимые корректировки.
+                    </p>
+                    <p>
+                      После утверждения проекта мы приступили к строительству. Наша команда строителей профессионально выполнила все работы, начиная от фундамента и возведения стен, и заканчивая установкой кровли и окон. 
+                      Мы использовали только качественные материалы, чтобы обеспечить надежность и долговечность бани.
+                    </p>
+                    <p>Параллельно с основными строительными работами мы занимались благоустройством, провели электромонтажные работы. </p>
+                  </div>
+                  <div class="portfolio__popup-result">В результате нашей работы Михаил получил свою мечту - просторную и уютную баню на своем участке. Он был очень доволен результатом и выразил благодарность нашей компании за профессионализм и качество работы.</div>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio__popup popup" id="portfolio-popup2">
+              <div class="popup__body">
+                <div class="popup__content">
+                  <a href="#" class="popup__close close-popup"
+                    ><img
+                      src="./img/navig/button-popup-close.svg"
+                      alt="Закрыть"
+                  /></a>
+                  <div class="portfolio__popup-text">
+                    <p>
+                      Мы провели серьезный анализ участка, учли его особенности и взяли во внимание окружающую среду. Архитекторы разработали эргономичный и функциональный план дома, учитывая все потребности семьи. Был создан эскиз, на основе которого была проведена визуализация будущего дома. Клиент получил возможность представить себе результат и внести коррективы в дизайн и интерьер.
+                    </p>
+                    <p>После утверждения проекта приступили к строительству. Мы использовали только качественные и проверенные материалы, чтобы обеспечить долговечность и надежность конструкции. Строительство дома из монолита требует высокой технологичности и строгого соблюдения процессов. Наша команда специалистов, имеющих большой опыт в данной области, тщательно следила за каждым этапом строительства. Результатом нашей работы стал прекрасный и современный дом для семьи.</p>
+                  </div>
+                  <div class="portfolio__popup-result">Монолитная конструкция позволила воплотить все архитектурные замыслы, а также обеспечила отличную тепло- и звукоизоляцию.</div>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio__popup popup" id="portfolio-popup3">
+              <div class="popup__body">
+                <div class="popup__content">
+                  <a href="#" class="popup__close close-popup"
+                    ><img
+                      src="./img/navig/button-popup-close.svg"
+                      alt="Закрыть"
+                  /></a>
+                  <div class="portfolio__popup-text">
+                    <p>
+                      Мы использовали передовые технологии и современное оборудование, чтобы обеспечить высокое качество работ и точность в деталях.
+                    </p>
+                    <p>
+                      В процессе строительства мы сотрудничали с клиентом, предоставляя ему регулярные обновления о ходе работ и консультировали его по различным вопросам.
+                    </p>
+                    <p>
+                      Строительство коттеджа заняло некоторое время, но результат был того стоит. Когда дом был построен, Евгений был восторге от его внешнего вида и внутреннего оформления. Каждая комната была создана с любовью и вниманием к деталям. Коттедж оказался просторным и функциональным, идеально подходящим для семейного образа жизни.
+                    </p>
+                  </div>
+                  <div class="portfolio__popup-result"> Евгений остался доволен нашей работой и нашим профессионализмом. Он получили не только красивый и уютный дом, но и прекрасный опыт сотрудничества с нами.</div>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio__popup popup" id="portfolio-popup4">
+              <div class="popup__body">
+                <div class="popup__content">
+                  <a href="#" class="popup__close close-popup"
+                    ><img
+                      src="./img/navig/button-popup-close.svg"
+                      alt="Закрыть"
+                  /></a>
+                  <div class="portfolio__popup-text">
+                    <p>
+                      Мы помогли им определиться с размерами и материалами, которые использовались для изготовления забора. Мы учли все  пожелания и предоставили детальный план работ.
+                    </p>
+                    <p>
+                      Работы по изготовлению кованного забора начались в оговоренные сроки. Наша команда профессионалов вложила всю свою энергию и мастерство в каждую деталь. Мы придавали большое значение деталям и использовали только высококачественные материалы.
+                    </p>
+                    <p>
+                      По завершении работ, мы были приятно удивлены результатом. Кованый забор превзошёл все наши ожидания. Он стал не только надежной защитой, но и настоящим произведением искусства.
+                    </p>
+                    <p>Новый забор вызвал восхищение у соседей и гостей нашего клиента. Они отметили его красоту и стильность, а также защитную функцию, которую он выполняет. Мы гордимся своей работой и благодарны нашему клиенту за то, что он доверил нам создание такого уникального изделия.</p>
+                  </div>
+                  <div class="portfolio__popup-result">Новый забор вызвал восхищение у соседей и гостей нашего клиента.</div>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio__popup popup" id="portfolio-popup5">
+              <div class="popup__body">
+                <div class="popup__content">
+                  <a href="#" class="popup__close close-popup"
+                    ><img
+                      src="./img/navig/button-popup-close.svg"
+                      alt="Закрыть"
+                  /></a>
+                  <div class="portfolio__popup-text">
+                    <p>
+                      Стол, стулья и полки в разных размерах были основными элементами, которые нужно было создать. При разработке дизайна мы старались сочетать современные материалы с элементами промышленности. Стол и стулья были сделаны из прочных металлических конструкций, а полки были выполнены из натурального дерева. Мы создали уникальный дизайн столешницы и спинок стульев, добавив несколько промышленных деталей, чтобы придать мебели особую привлекательность. 
+                    </p>
+                    <p>
+                      Помимо дизайна, мы также учли потребности нашего клиента в функциональности. Размеры стола и полок были тщательно спланированы, чтобы максимально использовать пространство студии. Каждый элемент мебели был изготовлен с учетом эргономики, чтобы обеспечить комфорт и удобство при использовании. По завершению проекта мы доставили и установили созданную мебель в студию нашего клиента. Она была в полном восторге от результата и признала, что мы превзошли ее ожидания.
+                    </p>
+                  </div>
+                  <div class="portfolio__popup-result">Мы были рады помочь Елене воплотить ее желания в реальность и создать уникальное пространство в стиле лофт.</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
         <div class="galery">
@@ -2144,10 +2642,19 @@
               <p>ИП Терехов А.Ю.</p>
               <p>ИНН 390705392899</p>
               <p>г.Калининград <br />ул.Узловая 16 В</p>
-              <p class="footer__mail"><a href="mailto:stylish_home39@mail.ru">Stylish_home39@mail.ru</a></p>
+              <p class="footer__mail">
+                <a href="mailto:stylish_home39@mail.ru"
+                  >Stylish_home39@mail.ru</a
+                >
+              </p>
             </address>
           </div>
-          <p class="footer__link">Сайт создан студией <a href="https://limstudiodesign.ru/" target="_blank">LimStudio.design </a></p>
+          <p class="footer__link">
+            Сайт создан студией
+            <a href="https://limstudiodesign.ru/" target="_blank"
+              >LimStudio.design
+            </a>
+          </p>
         </div>
       </footer>
     </div>
