@@ -1,7 +1,7 @@
 const servicesSlider = () => {
   const swiperImg = new Swiper(".services__slider-img", {
-    slidesPerView: 1, // Определите, сколько слайдов будет видно одновременно
-    spaceBetween: 5, // Расстояние между слайдами
+    slidesPerView: 1, 
+    spaceBetween: 5, 
     loop: true,
     navigation: {
       nextEl: ".swiper-button-next",
@@ -19,13 +19,12 @@ const servicesSlider = () => {
       },
     },
     slideToClickedSlide: true,
-    hashNavigation: true,
-    replaceState: true,
+
   });
 
   const swiperText = new Swiper(".services__slider-text", {
-    slidesPerView: 1, // Определите, сколько слайдов будет видно одновременно
-    spaceBetween: 0, // Расстояние между слайдами
+    slidesPerView: 1, 
+    spaceBetween: 0, 
     loop: true,
     effect: "fade",
     fadeEffect: {
@@ -42,43 +41,27 @@ const servicesSlider = () => {
       renderBullet: function (index, className) {
         return (
           '<span class="' + className + '">' + "0" + (index + 1) + "</span>"
-        ); // Отображать цифры
+        ); // Отображать цифры пагинации
       },
     },
     allowTouchMove: false,
-    //hashNavigation: true,
-    //replaceState: true,
+
   });
-
-
-  // Находим все ссылки с классом "swiper-link"
-  //const swiperLinks = document.querySelectorAll(".swiper-link");
-
-  //swiperLinks.forEach(function (link) {
-  //  link.addEventListener("click", function (e) {
-  //    e.preventDefault(); // Отмена действия по умолчанию (переход по ссылке)
-
-  //    var slideId = this.getAttribute("href"); // Получение ID слайда из атрибута href
-
-  //    if (slideId) {
-  //      //var swiper = document.querySelector(".swiper-container").swiper; // Получение экземпляра Swiper.js
-
-  //      swiperImg.slideTo(slideId); // Переключение на слайд с указанным ID
-  //      swiperText.slideTo(slideId); // Переключение на слайд с указанным ID
-  //    }
-  //  });
-  //})
-
-
 
   // Находим все ссылки с классом "swiper-link"
   const links = document.querySelectorAll(".swiper-link");
 
   // Обработчик клика по ссылке
   function handleLinkClick(event) {
-    event.preventDefault(); // Предотвращаем переход по ссылке по умолчанию
-    const slideId = this.hash; // Получаем ID слайда из атрибута href ссылки
 
+    links.forEach(function (link) {
+      link.classList.remove("active");
+    });
+
+    event.preventDefault(); // Предотвращаем переход по ссылке по умолчанию
+    const slideId = this.getAttribute("href").slice(1); // Получаем ID слайда из атрибута href ссылки
+
+    this.classList.add('active')
     swiperImg.slideTo(slideId);
     swiperText.slideTo(slideId);
   }

@@ -10,8 +10,8 @@ const servicesSliderMobile = () => {
     allowTouchMove: false,
     pagination: {
       el: ".swiper-pagination",
-      type: "bullets", // Использовать точки для пагинации
-      clickable: true, // Разрешить клик на пагинации для переключения слайдов
+      type: "bullets", 
+      clickable: true, 
       renderBullet: function (index, className) {
         return (
           '<span class="' + className + '">' + "0" + (index + 1) + "</span>"
@@ -21,8 +21,8 @@ const servicesSliderMobile = () => {
   });
 
   const swiperMobile = new Swiper(".slider__links", {
-    slidesPerView: 1, // Определите, сколько слайдов будет видно одновременно
-    spaceBetween: 0, // Расстояние между слайдами
+    slidesPerView: 1, 
+    spaceBetween: 0,
     loop: true,
     effect: "fade",
     fadeEffect: {
@@ -39,7 +39,7 @@ const servicesSliderMobile = () => {
       renderBullet: function (index, className) {
         return (
           '<span class="' + className + '">' + "0" + (index + 1) + "</span>"
-        ); // Отображать цифры
+        ); // Отображать цифры пагинации
       },
     },
     autoHeight: true,

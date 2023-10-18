@@ -1,7 +1,6 @@
 const animationFadeInUp = () => {
   const animTitle = document.querySelectorAll(".stage__title");
   const animText = document.querySelectorAll(".stage__text");
-  //const animItems = [...animTitle, ...animText];
 
   const animOnScroll = (entries) => {
     entries.forEach((entry) => {

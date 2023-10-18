@@ -757,9 +757,9 @@ header {
             padding: 0 2rem;
           }
 
-          //@media (min-width: 87em) {
-          //  padding: 0 auto;
-          //}
+          @media (min-width: 100em) {
+            padding: 0 4rem;
+          }
 
           &-links {
             display: none;
@@ -773,11 +773,15 @@ header {
               & .swiper-link {
                 color: #fff;
                 display: inline-block;
-                max-width: 100%;
+                max-width: 7.6rem;
                 font-size: 0.625rem;
                 font-style: normal;
                 font-weight: 300;
                 text-transform: uppercase;
+
+                &.active {
+                  font-weight: 700;
+                }
               }
             }
           }
@@ -1249,6 +1253,18 @@ header {
         display: flex;
         justify-content: center;
       }
+
+      &-previous {
+        display: none;
+        overflow: hidden;
+
+        @media (min-width: 80em) {
+          display: block;
+          min-width: 0;
+          //height: 100%;
+          flex-basis: 65%;
+        }
+      }
     }
 
     & h2 {
@@ -1268,12 +1284,70 @@ header {
         top: 3.38rem;
         left: 1.19rem;
       }
+      @media (min-width: 80em) {
+        top: 4.87rem;
+        left: 4.12rem;
+      }
+    }
+
+    &-previous__content {
+
+      &-link {
+          display: none;
+
+          @media (min-width: 80em) {
+            display: block;
+            position: absolute;
+            top: 47.6rem;
+            left: -7rem;
+            color: #fff;
+            text-align: right;
+            font-size: 0.9375rem;
+            font-weight: 300;
+          }
+        }
+
+      @media (min-width: 80em) {
+        overflow: hidden;
+        //width: 15.4375rem;
+        height: 36.375rem;
+        margin: 9.9rem 0;
+
+        &-image {
+          height: 100%;
+        }
+
+        
+
+        &-image img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+
+        }
+        &-image1 img {
+          object-position: 75%;
+        }
+        &-image2 img {
+          object-position: 5%;
+        }
+        &-image3 img {
+          object-position: 80%;
+        }
+        &-image4 img {
+          object-position: center;
+        }
+        &-image5 img {
+          object-position: 60%;
+        }
+        
+      }
     }
 
     & .slider__portfolio-container {
       padding: 0 0 0 2.81rem;
 
-      &:nth-child(2) {
+      &:nth-child(3) {
         border-top: 1px solid $line;
         @media (min-width: 58.75em) {
           border: none;
@@ -1289,7 +1363,7 @@ header {
     }
 
     & .swiper__portfolio {
-      &-wrapper {
+      &-content {
         padding: 1.44rem 0.88rem 1.5rem 0.19rem;
         min-height: 17.6rem;
 
@@ -1305,6 +1379,15 @@ header {
           margin: 7.19rem 0 6.54rem 0;
           border-top: 1px solid $line;
           border-bottom: 1px solid $line;
+        }
+
+        @media (min-width: 80em) {
+          min-height: 36.375rem;
+          padding: 0 1rem 0.75rem 2rem;
+          margin: 9.9rem 0 0 0;
+        }
+        @media (min-width: 100em) {
+          padding: 0 5.63rem 0.75rem 4.44rem;
         }
       }
 
@@ -1329,6 +1412,10 @@ header {
 
           font-size: 1rem;
         }
+        @media (min-width: 80em) {
+          top: 5.6rem;
+          left: 45vw;
+        }
       }
 
       &-client {
@@ -1338,6 +1425,9 @@ header {
         @media (min-width: 58.75em) {
           font-size: 1rem;
           padding: 0.94rem 0 0 0;
+        }
+        @media (min-width: 80em) {
+          padding: 0;
         }
       }
 
@@ -1351,6 +1441,9 @@ header {
           font-size: 2rem;
           padding: 0.8rem 0;
           letter-spacing: 0.14rem;
+        }
+        @media (min-width: 80em) {
+          padding: 1.56rem 0 0.8rem 0;
         }
       }
 
@@ -1371,16 +1464,27 @@ header {
           //padding: 0.8rem 0 ;
           line-height: 121%;
         }
+        @media (min-width: 80em) {
+          width: 100%;
+          line-height: 145%;
+        }
+        
       }
 
       &-result {
-         @media (min-width: 58.75em) {
+        @media (min-width: 58.75em) {
           position: absolute;
           top: 36rem;
           max-width: 19.79906rem;
           font-size: 0.75rem;
           font-weight: 300;
-         }
+        }
+        @media (min-width: 80em) {
+          text-align: right;
+          font-size: 0.875rem;
+          top: 39.5rem;
+          right: 2.31rem;
+        }
       }
 
       &-link {
@@ -1434,15 +1538,13 @@ header {
         height: 100%;
         object-fit: cover;
         @media (min-width: 58.75em) {
-
-          
         }
       }
 
       &-navig {
         display: flex;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: space-around;
         padding: 2.6rem 0 2.38rem 0;
 
         & .portfolio__button-prev:hover,
@@ -2414,7 +2516,11 @@ header {
     justify-content: space-between;
     font-size: 0.75rem;
     font-weight: 300;
-    width: max(60vw, 17rem);
+    width: max(80vw, 17rem);
+
+    @media (min-width: 32.5em) {
+      width: 60vw;
+    }
 
     @media (min-width: 58.75em) {
       width: 100%;

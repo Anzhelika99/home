@@ -16,6 +16,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/locking.js"></script>
     <script src="./js/menu.js" defer></script>
     <script src="./js/popupOpen.js" defer></script>
     <script src="./js/servicesSliderMobile.js" defer></script>
@@ -26,6 +27,7 @@
     <script src="./js/animationFadeInUp.js" defer></script>
     <script src="./js/smoothScroll.js" defer></script>
     <script src="./js/accordionQuestions.js" defer></script>
+
   </head>
   <body>
     <div class="wrapper">
@@ -257,16 +259,16 @@
                 </div>
               </div>
               <div class="services__slider-nav-links">
-                <a href="#slide1" class="swiper-link">Строительство</a>
-                <a href="#slide2" class="swiper-link"
+                <a href="#0" class="swiper-link active">Строительство</a>
+                <a href="#1" class="swiper-link"
                   >сварочные<br />
                   работы</a
                 >
-                <a href="#slide3" class="swiper-link"
+                <a href="#2" class="swiper-link"
                   >электромонтажные<br />
                   работы</a
                 >
-                <a href="#slide4" class="swiper-link"
+                <a href="#3" class="swiper-link"
                   >Все типы <br />отделочных<br />
                   работ</a
                 >
@@ -1429,11 +1431,62 @@
           <h2>НАШИ РАБОТЫ</h2>
 
           <div class="slider__portfolio">
+
+            <!-- слайдер с ссылками на слайд назад-->
+            <div class="slider__portfolio-previous">
+              <div class="swiper__portfolio-previous">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="portfolio-previous__content">
+                      <div class="portfolio-previous__content-image portfolio-previous__content-image1">
+                        <img src="./img/portfolio/portfolio-5.webp" alt="Изготовление мебели">
+                      </div>
+                      <!--<a href="#" class="portfolio-previous__content-link">Изготовление <br>мебели</a>-->
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="portfolio-previous__content">
+                      <div class="portfolio-previous__content-image portfolio-previous__content-image2">
+                        <img src="./img/portfolio/portfolio-1.webp" alt="Строительство бани">
+                      </div>
+                      <!--<a href="#" class="portfolio-previous__content-link">Строительство <br>бани</a>-->
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="portfolio-previous__content">
+                      <div class="portfolio-previous__content-image portfolio-previous__content-image3">
+                        <img src="./img/portfolio/portfolio-2.webp" alt="Строительство дома">
+                      </div>
+                      <!--<a href="#" class="portfolio-previous__content-link">Строительство <br>дома</a>-->
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="portfolio-previous__content">
+                      <div class="portfolio-previous__content-image portfolio-previous__content-image4">
+                        <img src="./img/portfolio/portfolio-3.webp" alt="Строительство котеджа">
+                      </div>
+                      <!--<a href="#" class="portfolio-previous__content-link">Строительство <br>котеджа</a>-->
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="portfolio-previous__content">
+                      <div class="portfolio-previous__content-image portfolio-previous__content-image5">
+                        <img src="./img/portfolio/portfolio-4.webp" alt="Кованный забор">
+                      </div>
+                      <!--<a href="#" class="portfolio-previous__content-link">Кованный <br>забор</a>-->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--текст слайдов-->
             <div class="slider__portfolio-container">
               <div class="swiper__portfolio-info">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    <div class="swiper__portfolio-wrapper">
+                    <div class="swiper__portfolio-content">
+                      <a href="#" class="portfolio-previous__content-link">Изготовление <br>мебели</a>
                       <div class="swiper__portfolio-year">2019г</div>
                       <div class="swiper__portfolio-client">
                         Проект<br />
@@ -1498,7 +1551,8 @@
                     </div>
                   </div>
                   <div class="swiper-slide">
-                    <div class="swiper__portfolio-wrapper">
+                    <div class="swiper__portfolio-content">
+                      <a href="#" class="portfolio-previous__content-link">Строительство <br>бани</a>
                       <div class="swiper__portfolio-year">2020г</div>
                       <div class="swiper__portfolio-client">
                         Проект<br />
@@ -1558,7 +1612,8 @@
                   </div>
 
                   <div class="swiper-slide">
-                    <div class="swiper__portfolio-wrapper">
+                    <div class="swiper__portfolio-content">
+                      <a href="#" class="portfolio-previous__content-link">Строительство <br>дома</a>
                       <div class="swiper__portfolio-year">2022г</div>
                       <div class="swiper__portfolio-client">
                         Проект<br />
@@ -1618,7 +1673,8 @@
                     </div>
                   </div>
                   <div class="swiper-slide">
-                    <div class="swiper__portfolio-wrapper">
+                    <div class="swiper__portfolio-content">
+                      <a href="#" class="portfolio-previous__content-link">Строительство <br>котеджа</a>
                       <div class="swiper__portfolio-year">2016г</div>
                       <div class="swiper__portfolio-client">
                         Проект<br />
@@ -1651,7 +1707,7 @@
                       >
                         Работы по изготовлению кованого забора начались в
                         оговоренные сроки. Наша команда профессионалов вложила
-                        всю свою энергию и мастерство в каждую деталь . Мы
+                        всю свою энергию и мастерство в каждую деталь. Мы
                         придавали большое значение деталям и использовали только
                         высококачественные материалы.
                       </p>
@@ -1686,7 +1742,8 @@
                     </div>
                   </div>
                   <div class="swiper-slide">
-                    <div class="swiper__portfolio-wrapper">
+                    <div class="swiper__portfolio-content">
+                      <a href="#" class="portfolio-previous__content-link">Кованный <br>забор</a>
                       <div class="swiper__portfolio-year">2021г</div>
                       <div class="swiper__portfolio-client">
                         Проект<br />
@@ -1748,6 +1805,7 @@
               </div>
             </div>
 
+            <!--изображения слайдов-->
             <div class="slider__portfolio-container">
               <div class="swiper__portfolio-images">
                 <div class="swiper-wrapper">
@@ -1795,6 +1853,7 @@
               </div>
             </div>
 
+            <!--навигация слайдов-->
             <div class="swiper__portfolio-navig">
               <div class="portfolio__button-prev">
                 <img src="./img/navig/galery-button-prev.svg" alt="Назад" />
@@ -1805,6 +1864,7 @@
             </div>
           </div>
 
+          <!--попапы для мобильной версии-->
           <div class="portfolio__popups">
             <div class="portfolio__popup popup" id="portfolio-popup1">
               <div class="popup__body">
@@ -2590,11 +2650,9 @@
             />
             <textarea
               id="message"
-              name="message"
               rows="10"
               placeholder="Сообщение"
               name="message"
-              form="form"
             ></textarea>
             <button type="submit" value="Отправить" name="submit">
               ОТПРАВИТЬ
