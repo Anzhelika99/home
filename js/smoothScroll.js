@@ -113,6 +113,11 @@ const smoothScroll = () => {
     });
   });
 
+  window.addEventListener("scroll", function () {
+    const scroll = document.querySelector(".upward");
+    scroll.classList.toggle("active", this.window.scrollY > 500);
+  });
+
 
 };
 

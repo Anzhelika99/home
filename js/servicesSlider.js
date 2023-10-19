@@ -76,17 +76,6 @@ const servicesSlider = () => {
     links[swiperImg.realIndex].classList.add("active");
   });
 
-  // Обработчик события "slideChange" для swiperText
-  //swiperText.on("slideChange", function () {
-  //  // Удаляем класс active для всех ссылок
-  //  links.forEach((link) => link.classList.remove("active"));
-
-  //  // Получаем индекс текущего активного слайда
-  //  const swiperTextActiveIndex = swiperText.realIndex;
-
-  //  // Добавляем класс active для ссылки, соответствующей текущему слайду
-  //  links[swiperTextActiveIndex].classList.add("active");
-  //});
 };
 
 servicesSlider();

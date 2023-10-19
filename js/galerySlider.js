@@ -3,7 +3,7 @@ const galerySlider = () => {
     slidesPerView: 1,
     spaceBetween: 20,
     loop: true,
-    allowTouchMove: false,
+    allowTouchMove: true,
     navigation: {
       nextEl: ".galery__button-next",
       prevEl: ".galery__button-prev",

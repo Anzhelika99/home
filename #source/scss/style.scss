@@ -152,6 +152,31 @@ body .wrapper {
   }
 }
 
+.upward {
+  position: fixed;
+  bottom: 700px;
+  left: 0.714em;
+  width: 2rem;
+  height: 2rem;
+  background: url("../img/navig/arrow__up.png") no-repeat;
+  background-size: contain;
+  z-index: 99;
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s;
+
+  &.active {
+    bottom: 2rem;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  @media (min-width: 58.75em) {
+    left: 2em;
+  }
+}
+
 header {
   .navbar {
     position: relative;
@@ -764,7 +789,6 @@ header {
       color: $text-orange;
       font-size: 1rem;
       font-weight: 700;
-      font-variant: small-caps;
       letter-spacing: 0.07rem;
 
       border-bottom: 1px solid $text-orange;
@@ -829,6 +853,22 @@ header {
           }
         }
 
+      }
+      & .swiper-button-next,
+      .swiper-button-prev {
+        display: block;
+        z-index: 0;
+        top: min(4.25rem, 81px);
+        width: auto;
+
+        height: auto;
+      }
+      & .swiper-button-next {
+        right: 1.69em;
+      }
+      & .swiper-button-prev {
+        left: initial;
+        right: max(4rem, 12vw);
       }
 
       @media (min-width: 58.75em) {
@@ -988,7 +1028,7 @@ header {
               color: $text-orange;
               font-size: 1rem;
               font-weight: 700;
-              font-variant: small-caps;
+              //font-variant: small-caps;
               letter-spacing: 0.07rem;
               border-bottom: 1px solid $text-orange;
               margin-top: 3rem;
@@ -1645,6 +1685,7 @@ header {
         & .portfolio__button-prev:hover,
         .portfolio__button-next:hover {
           cursor: pointer;
+          
         }
         @media (min-width: 58.75em) {
           position: absolute;
@@ -2214,13 +2255,14 @@ header {
       }
 
       &__nav {
+        
         display: flex;
         align-items: center;
         justify-content: space-evenly;
         margin-top: 4.31rem;
 
-        & .reviews__button-prev:hover,
-        & .reviews__button-next:hover {
+        & .reviews__button-prev,
+        & .reviews__button-next {
           cursor: pointer;
         }
 
@@ -2607,8 +2649,10 @@ header {
     font-weight: 300;
     letter-spacing: 0.07rem;
     margin: 0 0 2.19rem 0;
+    max-width: 14.4375rem;
 
     @media (min-width: 58.75em) {
+      max-width: 100%;
       font-size: 2rem;
       letter-spacing: 0.14rem;
       margin: 0 0 5.3rem 0;
@@ -2795,23 +2839,22 @@ header {
     width: max(1.56rem, 5vw);
   }
 
-  .swiper-button-next,
-  .swiper-button-prev {
-    display: block;
-    z-index: 0;
-    top: min(4.25rem, 81px);
-    width: auto;
+  //.swiper-button-next,
+  //.swiper-button-prev {
+  //  display: block;
+  //  z-index: 0;
+  //  top: min(4.25rem, 81px);
+  //  width: auto;
 
-    height: auto;
-  }
-  .swiper-button-next {
-    right: 1.69em;
-  }
-  .swiper-button-prev {
-    left: initial;
-    right: max(4rem, 12vw);
-
-  }
+  //  height: auto;
+  //}
+  //.swiper-button-next {
+  //  right: 1.69em;
+  //}
+  //.swiper-button-prev {
+  //  left: initial;
+  //  right: max(4rem, 12vw);
+  //}
 }
 
 .swiper-button-next:after,

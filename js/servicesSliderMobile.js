@@ -6,7 +6,7 @@ const servicesSliderMobile = () => {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-    allowTouchMove: false,
+    allowTouchMove: true,
     pagination: {
       el: ".swiper-pagination",
       type: "bullets", 
@@ -26,10 +26,10 @@ const servicesSliderMobile = () => {
     fadeEffect: {
       crossFade: true,
     },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
+    //navigation: {
+    //  nextEl: ".swiper-button-next",
+    //  prevEl: ".swiper-button-prev",
+    //},
     pagination: {
       el: ".swiper-pagination",
       type: "bullets",
@@ -43,5 +43,26 @@ const servicesSliderMobile = () => {
     autoHeight: true,
     allowTouchMove: false,
   });
+
+  swiperMobile.navigation = swiperImgMobile.navigation;
+
+
+  //swiperImgMobile.on("slideChange", function () {
+  //  swiperMobile.slideTo(swiperImgMobile.activeIndex);
+  //});
+
+  //swiperMobile.on("slideChange", function () {
+  //  swiperImgMobile.slideTo(swiperMobile.activeIndex);
+  //});
+
+  swiperImgMobile.on("slideNextTransitionStart", function () {
+    swiperMobile.slideNext();
+  });
+
+  swiperImgMobile.on("slidePrevTransitionStart", function () {
+    swiperMobile.slidePrev();
+  });
+
+  
 }
 servicesSliderMobile()
